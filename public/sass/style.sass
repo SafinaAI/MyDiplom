@@ -1,0 +1,1048 @@
+@import "normalizez.scss"
+@import "resets.scss"
+@import "abstracts/_fonts.sass"
+@import "abstracts/_variable.sass"
+@import "abstracts/_mixins.sass"
+
+@import "base/_animation.sass"
+@import "base/_base"
+@import "base/_adobt.sass"
+
+@import "components/_button.sass"
+@import "components/_texts_variants"
+@import "components/_lines.sass"
+@import "components/_icons.sass"
+
+@import "pages/_home.sass"
+@import "pages/_adopt_page.sass"
+@import "pages/_readMoreStorys.sass"
+@import "pages/_adoptYourFriend.sass"
+@import "pages/_care_page.sass"
+@import "pages/_raitingSpecWindow.sass"
+
+@import "layout/_header.sass"
+@import "layout/_formEmail.sass"
+@import "layout/_SocialMediaIcons"
+
+
+
+//____HEADER____
+
+.container
+    // max-width: 1140px
+    max-width: 1260px
+    margin: 0 auto
+    position: relative
+    padding: 0rem 3.8rem
+    @include respond(gorizontal-tab)
+        padding: 0rem 0rem
+
+.section-header
+    position: relative
+    padding-top: 1.6rem 
+    &__firstNav
+    &__container
+        display: flex
+        justify-content: space-between
+        align-items: center
+        box-shadow: 0rem 0.7rem 1.5rem 0.4rem rgba(34, 60, 80, 0.2)
+        border-radius: 5rem
+        margin-bottom: 1.5rem
+        @include respond(gorizontal-tab)
+            height: 6rem
+    &__logo
+        width: 18rem
+        margin-left: 2.5rem
+    &__nav
+    &__list
+    &__item
+    &__btns
+        margin-top: 1rem
+        margin-bottom: 1rem
+        margin-right: 2.5rem
+    @include respond(vertical-tab)
+        // height: 13vh
+        &__logo
+            width: 14rem
+            margin-left: 2.5rem
+        &__btns
+            margin-top: 1rem
+            margin-bottom: 1rem
+            margin-right: 2rem
+    @include respond(gorizontal-tab)
+        &__logo
+            width: 12rem
+            margin-left: 1rem
+        &__btns
+            margin-top: .5rem
+            margin-bottom: .5rem
+            margin-right: 1rem
+
+
+
+// //Верхняя часть навигации ( гавигация по продуктам)      
+// .firstNav в "layout/_header.sass"
+
+
+//Основное меню по странице
+.nav-menu   
+    &__list
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__list-item
+        margin-right: 6rem
+        font-size: 1.9rem
+        text-align: center
+        font-weight: 400
+        &:last-child
+            margin-right: 0rem
+        @include respond(gorizontal-tab)
+            margin-right: 4rem
+            font-size: 1.4rem
+            text-align: center
+            font-weight: 400
+            &:last-child
+                margin-right: 0rem
+
+.buttons    
+    &__LogIn
+        margin-right: 2rem
+        @include respond(vertical-gorizintal-tab)
+        margin-right: 1rem
+        font-size: 1.4rem
+    &__LogUp
+        @include respond(gorizintal-tab)
+        margin-right: 1rem
+        font-size: 1.4rem
+
+
+
+
+//____________ПЕРВАЯ СЕКЦИЯ (ФОТО + ТЕКСТ)__________
+
+.main-section
+    // height: 80vh
+    // @include respond(small-computer)
+    //     height: 75vh
+    // @include respond(vertical-tab)
+    //     height: 55vh
+    // @include respond(gorizontal-tab)
+    //     height: 46vh
+    // @include respond(gorizontal-phone)
+    //     height: 48vh // изменяем высоту на автоматическую для мобильных устройств
+    //     padding: 2rem // добавляем отступы для лучшего восприятия
+    //     background-color: #857263
+    &__container
+        @include respond(gorizontal-phone)
+            display: flex
+            flex-direction: column
+            align-items: center
+            text-align: center
+        @include respond(vertical-phone)
+            display: flex
+            flex-direction: column
+            align-items: center
+            text-align: center
+    
+//левая часть
+.left-wrapper
+    position: relative
+    @include respond(gorizontal-phone)
+        width: 70% // устанавливаем ширину 100% для мобильных
+        // display: flex
+        // justify-content: center // центрируем изображение
+        // margin-bottom: 2rem // добавляем отступ снизу
+    @include respond(vertical-phone)
+        width: 80%
+        
+    &__img
+        position: relative
+        width: 50%
+        @include respond(gorizontal-phone)
+            width: 80% // уменьшаем ширину изображения для мобильных
+            opacity: .35
+        @include respond(vertical-phone)
+            width: 80% // уменьшаем ширину изображения для мобильных
+            opacity: .35
+       
+//правая часть
+.right-wrapper
+    width: 57%
+    position: absolute
+    top: 13rem
+    right: 0rem
+    // padding-right: 3.8rem
+    @include respond(small-computer)
+        top: 6.5rem
+    @include respond(vertical-tab)
+        top: 5rem
+        // padding-right: 2rem
+    @include respond(gorizontal-tab)
+        top: 5rem
+    @include respond(gorizontal-phone)
+        width: 100% // устанавливаем ширину 100% для мобильных
+        // position: relative // изменяем позиционирование на относительное
+        text-align: center // выравниваем текст по центру
+        align-items: center
+    @include respond(vertical-phone)
+        width: 100% // устанавливаем ширину 100% для мобильных
+        // position: relative // изменяем позиционирование на относительное
+        text-align: center // выравниваем текст по центру
+    &__title
+        font-size: 3.7rem
+        font-weight: 700
+        margin-bottom: 3.5rem
+        line-height: 5.7rem
+        text-align: right
+        //анимация слева направо
+        animation-name: leftToRight
+        animation-duration: 2.2s
+        animation-delay: 0s
+        animation-timing-function: ease
+        backface-visibility: hidden
+        @include respond(small-computer)
+            font-size: 3.5rem
+            line-height: 5.5rem
+        @include respond(vertical-tab)
+            font-size: 3.5rem
+            line-height: 4rem
+            margin-bottom: 1.8rem
+        @include respond(gorizontal-tab)
+            font-size: 3.2rem
+            line-height: 4rem
+            margin-bottom: 2rem
+        @include respond(gorizontal-phone)
+            font-size: 5.8rem
+            text-align: center
+            position: relative
+            font-weight: 700
+            margin-bottom: 2rem
+            line-height: 7rem
+            margin-top: 5rem           
+        @include respond(vertical-phone)
+            font-size: 6rem
+            line-height: 7rem
+    &__text
+        font-size: 3.2rem
+        font-weight: 400
+        // min-width: 540px
+        line-height: 3.3rem
+        text-align: right
+        //анимация слева направо
+        animation-name: leftToRight
+        animation-duration: 2.2s
+        animation-delay: 0s
+        animation-timing-function: ease
+        backface-visibility: hidden
+        @include respond(small-computer)
+            font-size: 3rem
+            line-height: 2.9rem
+        @include respond(vertical-tab)
+            font-size: 2.3rem
+            line-height: 2.8rem
+        @include respond(gorizontal-tab)
+            font-size: 2rem
+            line-height: 2.8rem
+        @include respond(gorizontal-phone)
+            font-size: 4.5rem
+            line-height: 5rem
+            padding: 0 10rem
+            text-align: center
+            position: relative
+        @include respond(vertical-phone)
+            font-size: 4rem
+            line-height: 5rem
+
+
+
+
+//_____________ВТОРАЯ СЕКЦИЯ ___________
+
+
+.secnd-section
+    &__container     
+        position: relative
+        display: flex
+        flex-direction: column
+        background-color: #FFF8F3
+        border-radius: 3rem
+        box-shadow: 0.1rem 0.2rem 0.8rem 0.1rem rgba(34, 60, 80, 0.21)   
+        padding-top: 10rem
+        padding-left: 4rem
+        padding-left:  4rem   
+        margin-bottom: 5rem
+        
+        @include respond(vertical-tab)
+            padding-top: 6.5rem
+        @include respond(gorizontal-tab)
+            padding-top: 8rem
+        @include respond(gorizontal-phone)
+            text-align: center
+            padding-left: 0
+            padding-right: 0
+            align-items: center
+        @include respond(vertical-phone)
+            text-align: center
+            padding-left: 0
+            padding-right: 0
+            align-items: center
+
+    &__text
+        font-size: 3.2rem
+        font-weight: 400
+        text-align: center
+        margin-bottom: 4.4rem
+        @include respond(vertical-tab)
+            font-size: 2.7rem
+            font-weight: 400
+            text-align: center
+            margin-bottom: 3rem
+        @include respond(gorizontal-tab)
+            font-size: 2.7rem
+            margin-bottom: 3rem
+        @include respond(gorizontal-phone)
+            font-size: 3.5rem
+    &__title-text
+        font-size: 4.7rem
+        font-weight: 400
+        text-align: center
+        max-width: 124.4rem
+        margin-bottom: 2.5rem
+        @include respond(vertical-tab)
+            font-size: 3.8rem
+            font-weight: 400
+            text-align: center
+            max-width: 124.4rem
+            margin-bottom: 2rem
+            line-height: 4.8rem
+        @include respond(gorizontal-tab)
+            font-size: 3.5rem
+            margin-bottom: 4rem
+        @include respond(gorizontal-phone)
+            font-size: 5rem
+            line-height: 6rem
+    &__line
+        margin: auto
+        padding-bottom: 6.5rem
+        text-align: center
+        @include respond(vertical-tab)
+            padding-bottom: 2.5rem
+
+//_________________ТРЕТЬЯ СЕКЦИЯ_______________
+
+.third-section
+    // height: 103vh
+    // @include respond(small-computer)
+    //     height: 103vh
+    // @include respond(vertical-tab)
+    //     height: 100vh
+    // @include respond(gorizontal-tab)
+    //     height: 80vh
+    // @include respond(gorizontal-phone)
+    //     height: auto
+    // @include respond(vertical-phone)
+    //     height: auto
+    &__container
+        position: relative
+        // background-color: #F6F6F6
+        text-align: center
+        // @include respond(gorizontal-phone)
+        //     width: 50%
+        @include respond(gorizontal-phone)
+            margin-bottom: 7rem
+
+    &__text-small
+        margin-bottom: 2.7rem
+        @include respond(gorizontal-phone)
+            font-size: 6rem
+            margin-bottom: 4rem
+        @include respond(vertical-phone)
+            font-size: 5rem
+    &__text-big
+        margin-bottom: 5rem
+        @include respond(gorizontal-phone)
+            font-size: 7rem
+            line-height: 9rem
+        @include respond(vertical-phone)
+            font-size: 6rem
+    &__cards-box
+        display: flex
+        flex-direction: row
+        @include respond(gorizontal-phone)
+            flex-direction: column
+            width: 100%
+            align-items: center
+            text-align: center
+        @include respond(vertical-phone)
+            flex-direction: column
+            width: 100%
+            align-items: center
+            text-align: center
+    &__cards-item
+        margin-right: 2.2rem
+        &:last-child
+            margin-right: 0
+        @include respond(gorizontal-tab)
+            margin-right: 1.8rem
+            &:last-child
+                margin-right: 0
+        @include respond(gorizontal-phone)
+            margin-right: 0
+            width: 80%
+        @include respond(vertical-phone)
+            margin-right: 0
+            width: 80%
+            
+        
+//карточки описания Мисии
+.cards-item
+    margin-bottom: 5rem  
+    &__icon
+        width: 50%
+        margin-bottom: 2.5rem
+        &:hover
+            transform: scale(1.1) rotateZ(3deg)
+        @include respond(gorizontal-tab)
+            width: 45%
+            margin-bottom: 1.5rem
+            &:hover
+                transform: scale(1.1) rotateZ(3deg)
+        @include respond(gorizontal-phone)
+            width: 30%
+            margin-top: 4rem
+            margin-bottom: 4rem
+        @include respond(vertical-phone)
+            width: 30%
+            margin-top: 4rem
+            margin-bottom: 4rem
+        
+    &__textOrange
+        margin-bottom: 1rem
+        font-size: 2.5rem
+        @include respond(gorizontal-tab)
+            margin-bottom: .5rem
+            font-size: 2.3rem
+        @include respond(gorizontal-phone)
+            font-size: 6rem
+            line-height: 5.5rem
+            margin-bottom: 2rem
+        @include respond(vertical-phone)
+            font-size: 6rem
+            line-height: 5.5rem
+            margin-bottom: 2rem
+    &__textBlack
+        font-size: 2rem
+        padding: 1rem
+        @include respond(gorizontal-tab)
+            font-size: 1.8rem
+            padding: .8rem
+        @include respond(gorizontal-phone)
+            font-size: 5rem
+            line-height: 6rem
+            margin-bottom: 3rem
+        @include respond(vertical-phone)
+            font-size: 5rem
+            line-height: 6rem
+            margin-bottom: 3rem
+
+//_____________ЧЕТВЕРТАЯ СЕКЦИЯ_________________
+
+.fourth-section
+    // height: 150vh
+    // @include respond(small-computer)
+    //     height: 142vh
+    // @include respond(vertical-tab)
+    //     height: 140vh
+    // @include respond(gorizontal-tab)
+    //     height: 108vh
+    // @include respond(gorizontal-phone)
+    //     height: auto
+    // @include respond(vertical-phone)
+    //     height: auto
+    &__container
+        position: relative
+        text-align: center
+        @include respond(gorizontal-phone)
+            margin-bottom: 7rem
+    &__text-small
+        margin-bottom: 3rem
+        @include respond(gorizontal-tab)
+            margin-bottom: 5rem
+            font-size: 5rem
+        @include respond(vertical-phone)
+            margin-bottom: 5rem
+            font-size: 5rem
+    &__text-big
+        margin-bottom: 3rem
+        @include respond(gorizontal-tab)
+            margin-bottom: 5rem
+            font-size: 8rem
+            line-height: 8rem
+        @include respond(vertical-phone)
+            margin-bottom: 5rem
+            font-size: 8rem
+            line-height: 8rem
+    &__cards-box2
+        display: flex
+        flex-direction: row
+        // align-items: stretch
+        // flex-wrap: wrap
+        // justify-content: space-between
+        @include respond(gorizontal-phone)
+            flex-direction: column
+            align-items: center
+            text-align: center
+        @include respond(vertical-phone)
+            flex-direction: column
+            align-items: center
+            text-align: center
+    &__box2-item
+        margin-right: 4.5rem
+        &:last-child
+            margin-right: 0
+        @include respond(gorizontal-tab)
+            margin-right: 1.8rem
+            &:last-child
+                margin-right: 0
+        @include respond(gorizontal-phone)
+            margin-right: 0
+            width: 80%
+        @include respond(vertical-phone)
+            margin-right: 0
+            width: 80%
+
+.box2-item
+    position: relative
+    // width: 38rem
+    box-shadow: -0.1rem 0.5rem 1.1rem 0.2rem rgba(34, 60, 80, 0.2)
+    border-radius: 6rem
+    margin-bottom: 5rem
+    // min-height: 66.3rem
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    flex: 1
+    // padding: 5px
+    @include respond(gorizontal-phone)
+        border-radius: 16rem
+    @include respond(vertical-phone)
+        border-radius: 16rem
+    &__img
+        margin-bottom: 1rem
+        width: 100%
+        // object-fit: cover
+        &:hover
+            transform: scale(1) rotateZ(2deg)
+        @include respond(gorizontal-phone)
+            // width: 30%
+            margin-bottom: 4rem
+        @include respond(vertical-phone)
+            margin-bottom: 4rem
+
+    &__wrapper-text
+        padding-right: 1.5rem
+        padding-left: 1.5rem
+        text-align: center
+        margin-bottom: auto
+        flex: 1
+        display: flex
+        flex-direction: column
+        align-items: center
+        @include respond(gorizontal-tab)
+            padding-right: .5rem
+            padding-left: .5rem
+
+    &__text-superSmall
+        margin-bottom: 2rem
+        font-size: 1.5rem
+        @include respond(gorizontal-tab)
+            margin-bottom: 1.5rem
+            font-size: 1.3rem
+        @include respond(gorizontal-phone)
+            font-size: 3rem
+            margin-bottom: 5rem
+        @include respond(vertical-phone)
+            font-size: 3rem
+            margin-bottom: 5rem
+
+    &__textOrange
+        margin-bottom: 2.3rem
+        font-size: 2.8rem
+        color: $color-orange
+        @include respond(gorizontal-tab)
+            font-size: 2.3rem
+            margin-bottom: 1.5rem
+        @include respond(gorizontal-phone)
+            font-size: 5rem
+            margin-bottom: 3rem
+        @include respond(vertical-phone)
+            font-size: 5rem
+            margin-bottom: 3rem
+
+    &__textBlack
+        margin-bottom: 2rem
+        @include respond(gorizontal-tab)
+            font-size: 1.8rem
+        @include respond(gorizontal-phone)
+            font-size: 5rem
+            line-height: 6rem
+            margin-bottom: 5rem
+            padding: 0 3rem
+        @include respond(vertical-phone)
+            font-size: 5rem
+            line-height: 6rem
+            margin-bottom: 5rem
+            padding: 0 3rem
+     
+    &__btn
+        width: 80%
+        margin-bottom: 2.5rem
+        height: 6rem
+        font-size: 2rem
+        margin-top: auto
+        @include respond(gorizontal-tab)
+            margin-bottom: 2rem
+            height: 5.5rem
+            font-size: 1.8rem
+            width: 85%
+            height: 6.1rem
+        @include respond(gorizontal-phone)
+            margin-bottom: 3rem
+            height: 15rem
+            font-size: 4.8rem
+            border-radius: 25rem
+            width: 50%
+            padding: 3rem 5rem
+            margin-bottom: 6rem
+        @include respond(vertical-phone)
+            margin-bottom: 3rem
+            height: 15rem
+            font-size: 4.8rem
+            border-radius: 25rem
+            width: 70%
+            padding: 3rem 5rem
+            margin-bottom: 6rem
+
+
+       
+
+// ______________ПЯТАЯ СЕКЦИЯ_______________
+
+.fifth-section
+    // height: 80vh
+    // @include respond(small-computer)
+    //     height: 73vh
+    // @include respond(vertical-tab)
+    //     height: 75vh
+    // @include respond(gorizontal-tab)
+    //     height: 52vh
+    // @include respond(gorizontal-phone)
+    //     height: auto
+    &__container
+        padding: 4rem
+        position: relative
+        background-color: #FFF8F3
+        text-align: center
+        // padding-left: 38px
+        // padding-right: 38px
+        border-radius: 5rem
+        margin-bottom: 5rem
+        @include respond(gorizontal-phone)
+            padding-left: 0
+            padding-right: 0
+    &__text-small
+        margin-bottom: 5rem
+        @include respond(gorizontal-phone)
+            margin-bottom: 10rem
+            margin-top: 5rem
+    &__cards-box3
+        display: flex
+        flex-direction: row
+        @include respond(gorizontal-phone)
+            flex-direction: column
+            align-items: center
+            text-align: center
+            width: 100%
+    &__box3-item
+        margin-right: 2.2rem
+        &:last-child
+            margin-right: 0
+        @include respond(gorizontal-phone)
+            margin-right: 0
+            width: 80%
+            margin-bottom: 5rem
+
+//карточки описания Достижений
+.box3-item
+    height: 31rem
+    background-color: #FFFFFF
+    @include respond(gorizontal-tab)
+        height: auto
+    @include respond(gorizontal-phone)
+    &__icon
+        width: 50%
+        margin-bottom: 3rem
+        &:hover
+            transform: scale(1.1) rotateZ(3deg)
+        @include respond(gorizontal-tab)
+            width: 45%
+            margin-bottom: 1.5rem
+            &:hover
+                transform: scale(1.1) rotateZ(3deg)
+        @include respond(gorizontal-phone)
+            width: 30%
+            margin-top: 4rem
+            margin-bottom: 6rem
+    &__textMix
+        font-size: 2.3rem
+        font-weight: 700
+        @include respond(gorizontal-tab)
+            font-size: 2rem
+            margin-bottom: 1rem
+        @include respond(gorizontal-phone)
+            font-size: 6.5rem
+            line-height: 6.5rem
+            margin-bottom: 5rem
+            font-weight: 700
+
+
+
+//__________________ШЕСТАЯ СЕКЦИЯ_________________
+
+.sixth-section
+    // height: 130vh
+    // @include respond(small-computer)
+    //     height: 130vh
+    // @include respond(vertical-tab)
+    //     height: 120vh
+    // @include respond(gorizontal-tab)
+    //     height: 95vh
+    // @include respond(gorizontal-phone)
+    //     height: auto
+    &__container
+        position: relative
+        text-align: center
+        @include respond(gorizontal-phone)
+            margin-bottom: 7rem
+    &__text-small
+        margin-bottom: 3rem
+        @include respond(gorizontal-phone)
+            margin-top: 10rem
+            margin-bottom: 8rem
+
+    &__text-big
+        margin-bottom: 3rem
+        @include respond(gorizontal-phone)
+            margin-bottom: 5rem
+            font-size: 8rem
+            line-height: 8rem
+            
+    &__cards-box4
+        display: flex
+        flex-direction: row
+        @include respond(gorizontal-phone)
+            flex-direction: column
+            align-items: center
+            text-align: center
+    &__box4-item
+        margin-right: 3rem
+        &:last-child
+            margin-right: 0
+        @include respond(gorizontal-phone)
+            margin-right: 0
+            width: 80%
+    &__but
+        width: 40rem
+        height: 8rem
+        font-size: 4rem
+        margin-bottom: 6rem
+        &:focus, &:hover
+            font-size: 4rem
+        @include respond(gorizontal-phone)
+            width: 30%
+            height: 9rem
+            padding: 3rem
+            &:focus, &:hover
+                width: 40%
+                height: 9rem
+                padding: 3rem
+                font-size: 3.6rem
+        @include respond(vertical-phone)
+            width: 40%
+            height: 10.5rem
+            margin-top: 2rem
+            padding: 3rem
+            &:focus, &:hover
+                width: 40%
+                height: 9rem
+                padding: 3rem
+                font-size: 3.6rem
+
+.box4-item
+    position: relative
+    width: 37rem
+    box-shadow: -0.1rem 0.5rem 1.1rem 0.2rem rgba(34, 60, 80, 0.2)
+    border-radius: 5rem
+    margin-bottom: 5rem
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    flex: 1
+    align-items: center
+    @include respond(gorizontal-phone)
+        border-radius: 16rem
+        width: 80%
+    &__left-arrow
+        margin-right: 1.3rem
+    &__right-arrow
+        margin-left: 1.3rem
+    &__img
+        margin-bottom: 3.5rem
+        border-radius: 5rem
+        width: 100%
+        &:hover
+            transform: scale(1) rotateZ(2deg)
+        @include respond(gorizontal-phone)
+            // width: 30%
+            margin-bottom: 6rem
+    &__text-title
+        font-size: 3rem
+        margin-bottom: 1.5rem
+        @include respond(gorizontal-tab)
+            font-size: 2.8rem
+        @include respond(gorizontal-phone)
+            font-size: 4rem
+            margin-bottom: 6rem
+    &__wrapper-textInfo
+        max-height: 15rem
+        overflow: hidden
+        margin-bottom: 3rem
+        @include respond(gorizontal-tab)
+            margin-bottom: 2.5rem
+        @include respond(gorizontal-phone)
+            max-height: 35rem
+            margin-bottom: 5rem
+    &__text-info
+        // margin-bottom: 3.5rem
+        padding: 0rem 2rem
+        @include respond(gorizontal-tab)
+            padding: 0rem .7rem
+        @include respond(gorizontal-phone)
+            font-size: 5rem
+            line-height: 6rem
+            margin-bottom: 6rem
+            padding: 0 4rem
+    &__btn
+        margin-bottom: 2rem
+        margin-top: auto
+        width: 50%
+        @include respond(gorizontal-tab)
+            margin-bottom: 1.5rem
+            width: 60%
+        @include respond(gorizontal-phone)
+            margin-bottom: 3rem
+            height: 15rem
+            font-size: 4.8rem
+            border-radius: 25rem
+            width: 50%
+            padding: 3rem 5rem
+            margin-bottom: 6rem
+            margin-top: 4rem
+            
+
+
+
+//________________СЕДЬМАЯ СЕКЦИЯ______________
+
+.seventh-section
+    // height: 25vh
+    // @include respond(small-computer)
+    //     height: 22vh
+    // @include respond(vertical-tab)
+    //     height: 25vh
+    // @include respond(gorizontal-tab)
+    //     height: 18vh
+    // @include respond(gorizontal-phone)
+    //     height: auto
+    &__container
+        position: relative
+        text-align: center
+        @include respond(gorizontal-phone)
+            margin-bottom: 7rem
+    &__wrapper
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        @include respond(gorizontal-phone)
+            flex-direction: column
+            align-items: center
+            text-align: center
+    &__text
+        font-size: 4rem
+        text-align: left
+        @include respond(gorizontal-tab)
+            font-size: 3.1rem
+            line-height: 5rem
+        @include respond(gorizontal-phone)
+            font-size: 8rem
+            line-height: 8rem
+            margin-bottom: 5rem
+        @include respond(vertical-phone)
+            text-align: center
+    &__icons-box
+        display: flex
+        flex-direction: row
+
+
+
+       
+
+
+//___________ВОСЬМАЯ СЕКЦИЯ FOOTER____________       
+    
+
+.footer-section
+    // height: 43vh
+    // @include respond(small-computer)
+    //     height: 43vh
+    // @include respond(gorizontal-tab)
+    //     height: 30vh
+    // @include respond(gorizontal-tab)
+    //     height: 28vh
+    // @include respond(gorizontal-phone)
+    //     height: auto
+    &__container
+        position: relative
+        text-align: left
+        @include respond(gorizontal-phone)
+            margin-bottom: 1rem
+    &__orangeLine
+        margin-bottom: 5rem
+        border-bottom: 0.5rem solid #F19A56 
+    &__wrapper
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        @include respond(gorizontal-phone)
+            flex-direction: column
+            align-items: center
+            text-align: center
+    &__item
+        margin-right: 3rem
+        &:last-child
+            margin-right: 0
+.fotter-item
+    position: relative
+    &__logo
+        margin-right: 17rem
+        @include respond(gorizontal-tab)
+            margin-right: 5rem
+            width: 20rem
+        @include respond(gorizontal-phone)
+            width: 35rem
+            margin-right: 0
+            margin-bottom: 5rem
+    &__title
+        font-size: 2rem
+        margin-bottom: 2rem
+        text-transform: uppercase
+        @include respond(gorizontal-tab)
+            font-size: 1.8rem
+            margin-bottom: 1.5rem
+        @include respond(gorizontal-phone)
+            font-size: 3.5rem
+    &__list
+        @include respond(gorizontal-phone)
+            margin-bottom: 5rem
+.footer-list
+    &__item
+        margin-bottom: 2rem
+        @include respond(gorizontal-tab)
+            margin-bottom: 1rem
+        // @include respond(gorizontal-phone)
+        //     margin-bottom: 2rem
+    &__link
+        font-size: 1.6rem
+        @include respond(gorizontal-tab)
+            font-size: 1.3rem
+        &:hover 
+            color: $color-orange    
+        @include respond(gorizontal-phone)
+            font-size: 2.5rem
+            line-height: 4.5rem   
+        
+
+
+//_____________ДЕВЯТАЯ СЕКЦИЯ_____________
+
+.ninth-section
+    // height: 25vh
+    // @include respond(small-computer)
+    //     height: 25vh
+    // @include respond(gorizontal-phone)
+    //     height: auto
+    &__container
+        position: relative
+        text-align: left
+        @include respond(gorizontal-phone)
+            margin-bottom: 1rem
+    &__greyLine
+         border-bottom: 0.3rem solid #2e2e2e9c
+         margin-bottom: 3.5rem
+    &__wrapper
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        @include respond(gorizontal-phone)
+            flex-direction: column
+            align-items: center
+            text-align: center
+    &__left-text
+        flex: 1
+        margin-right: 9.1rem
+        line-height: 1.8rem
+        font-size: 1.2rem
+        @include respond(gorizontal-tab)
+            font-size: 1rem
+            line-height: 1.5rem
+        @include respond(gorizontal-phone)
+            font-size: 1.5rem
+            line-height: 2.5rem
+            width: 70%
+            margin-bottom: 2.5rem
+    &__right-text
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+
+.right-text
+    &__privacyPolicy
+        margin-right: 1rem
+        line-height: 1.8rem
+        font-size: 1.2rem
+        @include respond(gorizontal-tab)
+            font-size: 1rem
+            line-height: 1.5rem
+        &:hover
+            color: $color-orange-focus
+            text-transform: lowercase
+            transition: all 0.5s
+        @include respond(gorizontal-phone)
+            font-size: 1.5rem
+            line-height: 2.5rem
+            margin-bottom: 4rem
+    &__termsOfService
+        line-height: 1.8rem
+        font-size: 1.2rem
+        @include respond(gorizontal-tab)
+            font-size: 1rem
+            line-height: 1.5rem
+        &:hover
+            color: $color-orange-focus
+            text-transform: lowercase
+            transition: all 0.5s
+        @include respond(gorizontal-phone)
+            font-size: 1.5rem
+            line-height: 2.5rem
+            margin-bottom: 4rem

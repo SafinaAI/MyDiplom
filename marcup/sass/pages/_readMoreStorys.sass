@@ -1,0 +1,144 @@
+
+
+
+.story-card 
+    width: 100%
+    max-width: 300px
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1)
+    border-radius: 10px
+    background-color: #fff
+
+
+
+
+.readMoreStorys
+    &__storys-box4
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        gap: 3rem
+        width: 100%
+        margin: 0 auto
+        justify-items: center
+    &__text-big
+        margin-top: 7rem
+        margin-bottom: 5rem
+        @include respond(gorizontal-phone)
+            margin-bottom: 10rem
+            font-size: 8rem
+            line-height: 8rem
+    &__but
+        width: 40rem
+        height: 8rem
+        font-size: 4rem
+        margin-bottom: 6rem
+        &:focus, &:hover
+            font-size: 4rem
+        @include respond(gorizontal-phone)
+            width: 30%
+            height: 9rem
+            padding: 3rem
+            &:focus, &:hover
+                width: 40%
+                height: 9rem
+                padding: 3rem
+                font-size: 3.6rem
+        @include respond(vertical-phone)
+            width: 40%
+            height: 10.5rem
+            margin-top: 2rem
+            padding: 3rem
+            &:focus, &:hover
+                width: 40%
+                height: 9rem
+                padding: 3rem
+                font-size: 3.6rem
+    &__footter
+        margin-top: 8rem
+    // когда пользователь нажал на посмотреть историю в карточке 
+.readOneStory
+    display: flex
+    flex-direction: column
+    align-items: center
+    &__titel
+        font-size: 3.5rem
+        margin-bottom: 2rem
+    &__image
+        margin-bottom: 4rem
+    &__text
+        line-height: 3.2rem
+        font-size: 2rem
+        margin-bottom: 5rem
+    
+
+.storys-item
+    position: relative
+    height: auto
+    width: 100%
+    box-shadow: -0.1rem 0.5rem 1.1rem 0.2rem rgba(34, 60, 80, 0.2)
+    border-radius: 5rem
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    flex: 1
+    align-items: center
+    @include respond(gorizontal-phone)
+        border-radius: 16rem
+        width: 80%
+    &__left-arrow
+        margin-right: 1.3rem
+    &__right-arrow
+        margin-left: 1.3rem
+    &__img
+        margin-bottom: 3.5rem
+        border-radius: 5rem
+        width: 100%
+        height: 50%
+        &:hover
+            transform: scale(1) rotateZ(2deg)
+        @include respond(gorizontal-phone)
+            // width: 30%
+            margin-bottom: 6rem
+    &__text-title
+        font-size: 3rem
+        margin-bottom: 1.5rem
+        @include respond(gorizontal-tab)
+            font-size: 2.8rem
+        @include respond(gorizontal-phone)
+            font-size: 4rem
+            margin-bottom: 6rem
+    &__wrapper-textInfo
+        max-height: 15rem
+        overflow: hidden
+        margin-bottom: 3rem
+        @include respond(gorizontal-tab)
+            margin-bottom: 2.5rem
+        @include respond(gorizontal-phone)
+            max-height: 35rem
+            margin-bottom: 5rem
+    &__text-info
+        // margin-bottom: 3.5rem
+        padding: 0rem 2rem
+        @include respond(gorizontal-tab)
+            padding: 0rem .7rem
+        @include respond(gorizontal-phone)
+            font-size: 5rem
+            line-height: 6rem
+            margin-bottom: 6rem
+            padding: 0 4rem
+    &__btn
+        margin-bottom: 2rem
+        // margin-top: auto
+        width: 50%
+        @include respond(gorizontal-tab)
+            margin-bottom: 1.5rem
+            width: 60%
+        @include respond(gorizontal-phone)
+            margin-bottom: 3rem
+            height: 15rem
+            font-size: 4.8rem
+            border-radius: 25rem
+            width: 50%
+            padding: 3rem 5rem
+            margin-bottom: 6rem
+            margin-top: 4rem
+            

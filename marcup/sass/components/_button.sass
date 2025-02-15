@@ -1,0 +1,47 @@
+button
+    font-weight: 400
+    width: 13.6rem
+    height: 4.4rem
+    box-shadow: 0px 1px 5px 4px rgba(34, 60, 80, 0.2)
+    // color: #2E2E2E
+    color: #ffffff
+    background-color: $color-orange
+    border-radius: 5rem
+    border-style: none
+    font-size: 1.8rem
+    @include respond(gorizontal-tab)
+        width: 12rem
+        font-size: 1.2rem
+    @include respond(gorizontal-phone)
+        margin-bottom: 3rem
+        height: 15rem
+        font-size: 4.5rem
+        border-radius: 25rem
+        width: 50%
+        padding: 3rem 4rem
+        margin-bottom: 6rem
+    &:focus, &:hover
+        background-color: $color-orange-focus
+        text-transform: uppercase
+        text-decoration: none
+        font-size: 1.7rem
+        transition: all 0.5s
+        box-shadow: 0px 2px 5px 4px rgba(34, 60, 80, 0.3)
+        @include respond(gorizontal-tab)
+            font-size: 1.4rem
+        @include respond(gorizontal-phone)
+            margin-bottom: 3rem
+            height: 15rem
+            font-size: 4.5rem
+            border-radius: 25rem
+            width: 50%
+            padding: 3rem 4rem
+            margin-bottom: 6rem
+        @include respond(vertical-phone)
+            margin-bottom: 3rem
+            height: 15rem
+            font-size: 4.5rem
+            border-radius: 25rem
+            width: 70%
+            padding: 3rem 4rem
+            margin-bottom: 6rem

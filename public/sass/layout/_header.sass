@@ -1,0 +1,30 @@
+//Верхняя часть навигации ( гавигация по продуктам)      
+.firstNav
+    &__container
+        background-color: #F6F6F6
+        max-height: 5rem
+        margin-top: 1rem
+        margin-bottom: 1.3rem
+    &__list
+        display: flex
+        justify-content: center
+        align-items: center
+    &__list-item
+        margin-right: 3rem
+        padding: 1rem
+        &:last-child
+            margin-right: 0rem
+        @include respond(vertical-tab)
+            margin-right: 2.5rem
+            padding: 1rem
+            font-size: 1.2rem
+            &:last-child
+                margin-right: 0rem
+        // @include respond(gorizontal-phone)
+        //     margin-right: 1.5rem
+        //     padding: .5rem
+        //     font-size: .8rem
+        //     &:last-child
+        //         margin-right: 0rem
+    &__hr
+        height: 1rem

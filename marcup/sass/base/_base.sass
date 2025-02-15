@@ -1,0 +1,51 @@
+
+//Общие значения       
+
+
+html
+    font-size: 10px // чтобы один REM был = 10
+    @include respond(small-computer)
+            font-size: 60% 
+    @include respond(vertical-tab)
+            font-size: 55% 
+    @include respond(gorizontal-tab)
+            font-size: 45% 
+    @include respond(vertical-phone)
+            font-size: 20%
+    @include respond(gorizontal-phone)
+            font-size: 20%
+    @include respond(big-screen)
+            font-size: 65% 
+
+.container
+    @include respond(small-computer)
+        width: 1060px
+    @include respond(vertical-tab)
+        width: 870px
+    @include respond(gorizontal-tab)
+        width: 680px
+    @include respond(vertical-phone)
+        width: 100%
+    @include respond(gorizontal-phone)
+        width: 100%
+    @include respond(big-screen)
+        width: 1240px
+
+
+*, ::afrer, ::before
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    
+body
+    font-family: 'Khula!', sans-serif
+    font-weight: 400
+    letter-spacing: 0.2rem
+    font-size: 1.5rem
+    color: #2E2E2E
+    background-color: #ffffff
+    line-height: 2.6rem
+
+a
+    text-decoration: none
+    color: #2E2E2E

@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="./src/js/js-libraries/glide.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="./src/js/js-libraries/glide.core.min.css">
+    <link rel="stylesheet" href="./src/js/js-libraries/glide.theme.min.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Khula:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <title>LexVetAdopt</title>
+  </head>
+  <body>
+    <!-------------------------------------->
+    <!-------------------------------------->
+    <!-- HEADER -->
+
+    <header class="section-header">
+      <!-------------------------------------->
+      <!-------------------------------------->
+      <!-- Верхняя часть навигации ( гавигация по продуктам) -->
+      <div class="section-header__firstNav firstNav firstNav__container">
+        <ul class="firstNav__list">
+          <li class="firstNav__list-item">
+            <a href="#"> LexVet Усыновление</a>
+          </li>
+          <div class="firstNav__hr demarcationLine"></div>
+          <li class="firstNav__list-item">
+            <a href="#">LexVet Поиск</a>
+          </li>
+          <div class="firstNav__hr demarcationLine"></div>
+          <li class="firstNav__list-item">
+            <a href="#">LexVet Забота</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-------------------------------------->
+      <!-------------------------------------->
+      <!-- Основное меню по странице -->
+
+      <div class="section-header__container container">
+        <!-- Лого меню -->
+        <a class="section-header__logo-link" href="./index.html">
+          <img
+            src="./src/icons/LOGO.svg"
+            alt="Logo"
+            class="section-header__logo"
+          />
+        </a>
+        <!-- Блок меню -->
+        <nav class="section-header__nav nav-menu">
+          <ul class="nav-menu__list">
+            <li class="nav-menu__list-item">
+              <!-- <a href="#">Кто мы</a> -->
+            </li>
+            <li class="nav-menu__list-item">
+              <!-- <a href="#">Что мы делаем</a> -->
+            </li>
+          </ul>
+        </nav>
+        <!-- Блок кнопок в меню -->
+        <div class="section-header__btns buttons">
+          <!-- <button class="buttons__LogIn">Регистрация</button>
+            <button class="buttons__LogUp">Поддержать</button> -->
+        </div>
+      </div>
+    </header>
+
+    <!-------------------------------------->
+    <!-------------------------------------->
+    <!-- СЕКЦИЯ 1 -->
+    <!-- ФОТО + ФОРМА -->
+
+    <section class="adob-first-section">
+      <div class="adob-first-section__container container">
+        <!-- <img
+      src="./src/img/try3.png"
+      alt="фото фона"
+      class="first-section__background-img"
+      /> -->
+        <div class="adob-first-section__background-img">
+          <div class="adob-first-section__text-wrapper">
+            <h2 class="adob-first-section__title text-big">
+              Твой друг ждет тебя тут!
+            </h2>
+            <p class="adob-first-section__text text-small">
+              Уже более 500 животных, нашли себе новых хозяев
+            </p>
+            <div class="adob-first-section__btns button">
+              <button class="adob-first-section__btns-animals">
+                Наши животные
+              </button>
+              <button class="adob-first-section__btns-donat">
+                Пожертвовать
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-------------------------------------->
+    <!-------------------------------------->
+    <!-- СЕКЦИЯ 2 -->
+    <!-- ЖИВОТНЫЕ ГОТОВЫЕ К УСЫНОВЛЕНИЮ -->
+
+    <section class="adob-second-section">
+      <div class="adob-second-section__container container">
+        <p class="adob-second-section__text-small text-small">
+          Найдите своего малыша
+        </p>
+        <p class="adob-second-section__text-big text-big">
+          Эти животные готовы найти свой <span class="orange-word">дом</span>.
+          <br />
+          Здесь вы найдете своего лучшего друга, <br />
+          который <span class="orange-word">ждет</span> именно вас.
+        </p>
+        <!-- <hr class="secnd-section__line line" /> -->
+        <!-- карточки с животными, готовые к усыновлению -->
+        <div class="adob-second-section__adob-cards-box1">
+          <!-- карточка 1 -->
+          <div class="adob-second-section__adob-box1-item adob-box1-item">
+            <img
+              src="./src/img/adopt_sec_2_photo1.jpg"
+              alt="фото питомца 1"
+              class="adob-box1-item__img"
+            />
+            <p class="adob-box1-item__pet-name textBlack">Буся</p>
+            <p class="adob-box1-item__pet-age text-superSmall">
+              Мальчик / 1год
+            </p>
+            <p class="adob-box1-item__pet-city text-superSmall">Казань</p>
+          </div>
+          <!-- карточка 2 -->
+          <div class="adob-second-section__adob-box1-item adob-box1-item">
+            <img
+              src="./src/img/adopt_sec_2_photo2.jpg"
+              alt="фото питомца 1"
+              class="adob-box1-item__img"
+            />
+            <p class="adob-box1-item__pet-name textBlack">Алекс</p>
+            <p class="adob-box1-item__pet-age text-superSmall">
+              Мальчик / 1год
+            </p>
+            <p class="adob-box1-item__pet-city text-superSmall">Казань</p>
+          </div>
+          <!-- карточка 3 -->
+          <div class="adob-second-section__adob-box1-item adob-box1-item">
+            <img
+              src="./src/img/adopt_sec_2_photo3.jpg"
+              alt="фото питомца 1"
+              class="adob-box1-item__img"
+            />
+            <p class="adob-box1-item__pet-name textBlack">Маруся</p>
+            <p class="adob-box1-item__pet-age text-superSmall">
+              Девочка / 1год
+            </p>
+            <p class="adob-box1-item__pet-city text-superSmall">Казань</p>
+          </div>
+          <!-- карточка 4 -->
+          <div class="adob-second-section__adob-box1-item adob-box1-item">
+            <img
+              src="./src/img/adopt_sec_2_photo4.jpg"
+              alt="фото питомца 1"
+              class="adob-box1-item__img"
+            />
+            <p class="adob-box1-item__pet-name textBlack">Джиджи</p>
+            <p class="adob-box1-item__pet-age text-superSmall">
+              Девочка / 1год
+            </p>
+            <p class="adob-box1-item__pet-city text-superSmall">Казань</p>
+          </div>
+        </div>
+        <button class="adob-second-section__btn button">Узнать больше</button>
+        <hr class="adob-second-section__line line" />
+      </div>
+    </section>
+
+    <!-------------------------------------->
+    <!-------------------------------------->
+    <!-- ЖИВОТНЫЕ НУЖДАЮЩИЕСЯ В ПОМОЩИ -->
+    <section class="adob-third-section">
+      <div class="adob-third-section__container container">
+        <p class="adob-third-section__text-small text-small">
+          Они нуждаются в вашей помощи
+        </p>
+        <p class="adob-third-section__text-big text-big">
+          Эти животные находятся на лечении. <br />
+          Вы можете внести свой вклад в их скорейшее выздоровление,<span
+            class="orange-word"
+            >пожертвовав любую сумму</span
+          >.
+        </p>
+        <!-- карточки с животными, готовые к усыновлению -->
+        <div class="adob-third-section__adob-cards-box2">
+          <!-- карточка 1 -->
+          <div class="adob-third-section__adob-box2-item adob-box2-item">
+            <img
+              src="./src/img/adob_third_section_cart1.jfif"
+              alt="фото питомца 1"
+              class="adob-box2-item__img"
+            />
+            <p class="adob-box2-item__pet-name textBlack">Буся</p>
+            <p class="adob-box2-item__pet-age text-superSmall">
+              Мальчик / 1год
+            </p>
+            <p class="adob-box2-item__pet-city text-superSmall">Казань</p>
+            <button class="adob-box2-item__pet-btn button">Пожертвовать</button>
+          </div>
+          <!-- карточка 2 -->
+          <div class="adob-third-section__adob-box2-item adob-box2-item">
+            <img
+              src="./src/img/adob_third_section_cart2.jfif"
+              alt="фото питомца 2"
+              class="adob-box2-item__img"
+            />
+            <p class="adob-box2-item__pet-name textBlack">Алекс</p>
+            <p class="adob-box2-item__pet-age text-superSmall">
+              Мальчик / 1год
+            </p>
+            <p class="adob-box2-item__pet-city text-superSmall">Казань</p>
+            <button class="adob-box2-item__pet-btn button">Пожертвовать</button>
+          </div>
+          <!-- карточка 3 -->
+          <div class="adob-third-section__adob-box2-item adob-box2-item">
+            <img
+              src="./src/img/adob_third_section_cart3.jfif"
+              alt="фото питомца 3"
+              class="adob-box2-item__img"
+            />
+            <p class="adob-box2-item__pet-name textBlack">Маруся</p>
+            <p class="adob-box2-item__pet-age text-superSmall">
+              Девочка / 1год
+            </p>
+            <p class="adob-box2-item__pet-city text-superSmall">Казань</p>
+            <button class="adob-box2-item__pet-btn button">Пожертвовать</button>
+          </div>
+          <!-- карточка 4 -->
+          <div class="adob-third-section__adob-box2-item adob-box2-item">
+            <img
+              src="./src/img/adob_third_section_cart4.jfif"
+              alt="фото питомца 4"
+              class="adob-box2-item__img"
+            />
+            <p class="adob-box2-item__pet-name textBlack">Джиджи</p>
+            <p class="adob-box2-item__pet-age text-superSmall">
+              Девочка / 1год
+            </p>
+            <p class="adob-box2-item__pet-city text-superSmall">Казань</p>
+            <button class="adob-box2-item__pet-btn button">Пожертвовать</button>
+          </div>
+        </div>
+        <button class="adob-third-section__btn button">Узнать больше</button>
+        <hr class="adob-third-section__line line" />
+      </div>
+    </section>
+
+    <!-------------------------------------->
+    <!-------------------------------------->
+    <!-- СЧАСТЛИВЫЕ ИСТОРИИ ПОДПИСЧИКОВ -->
+    <section class="adob-fourth-section">
+      <div class="adob-fourth-section__container container">
+        <!-- анатология к секции -->
+        <p class="adob-fourth-section__text-big text-big">
+          <span class="orange-word">Счастливые</span> истории наших <br />
+          подписчиков
+        </p>
+        <!-- карточки описания Отзывов -->
+        <div class="adob-fourth-section__adob-cards-box3">
+          <div class="adob-fourth-section__adob-box3-item adob-box3-item">
+            <img
+              class="adob-box3-item__img"
+              src="./src/img/adob_fourth_section_card1.jfif"
+              alt="История владельца 1"
+            />
+            <p class="adob-box3-item__text-title textBlack">Таня и Мася</p>
+            <div class="adob-box3-item__wrapper-textInfo">
+              <p class="adob-box3-item__text-info textBlack">
+                Только сейчас я поняла, что такое иметь верного друга в доме.
+              </p>
+            </div>
+            <button class="adob-box3-item__btn button">Читать</button>
+          </div>
+          <!-- карточка 2 -->
+          <div class="adob-fourth-section__adob-box3-item adob-box3-item">
+            <img
+              class="adob-box3-item__img"
+              src="./src/img/adob_fourth_section_card2.jfif"
+              alt="История владельца 2"
+            />
+            <p class="adob-box3-item__text-title textBlack">Том и Бакс</p>
+            <div class="adob-box3-item__wrapper-textInfo">
+              <p class="adob-box3-item__text-info textBlack">
+                Я давно хотел взять себе друга. В приюте было много собак, но он
+                был особенным. Теперь я самый счастливый человек.
+              </p>
+            </div>
+            <button class="adob-box3-item__btn button">Читать</button>
+          </div>
+          <!-- карточка 3 -->
+          <div class="adob-fourth-section__adob-box3-item adob-box3-item">
+            <img
+              class="adob-box3-item__img"
+              src="./src/img/adob_fourth_section_card3.jfif"
+              alt="История владельца 3"
+            />
+            <p class="adob-box3-item__text-title textBlack">Анастасия и Бам</p>
+            <div class="adob-box3-item__wrapper-textInfo">
+              <p class="adob-box3-item__text-info textBlack">
+                Как только я его увидела в приюте, сразу поняла, что он будет
+                жить у меня. Это самый лучший пес на свете.
+              </p>
+            </div>
+            <button class="adob-box3-item__btn button">Читать</button>
+          </div>
+        </div>
+        <div class="adob-fourth-section__dots"></div>
+        <button class="adob-fourth-section__btn button">Узнать больше</button>
+        <hr class="adob-fourth-section__line line" />
+      </div>
+    </section>
+    <!-------------------------------------->
+    <!-------------------------------------->
+    <!-- КУДА УЙДУТ ДЕНЬГИ С ПОЖЕРТВОВАНИЙ -->
+    <section class="adob-fifth-section">
+      <div class="adob-fifth-section__container container">
+        <div class="adob-fifth-section__color-wrap">
+          <!-- анатология к секции -->
+          <p class="adob-fifth-section__text-small text-small">
+            Любая сумма важна
+          </p>
+          <!-- описание секции -->
+          <p class="adob-fifth-section__text-big text-big">
+            Приютам не хватает денег на обеспечение всех питомцев. Вы можете
+            подарить <span class="orange-word">любовь</span> хвостикам,
+            пожертвовав любую сумму любому приюту.
+          </p>
+
+        </div>
+        <p class="adob-fifth-section__text-descript text-small">
+          Деньги с пожертвований пойдут на
+        </p>
+        <!-- карточки описания способов помощи -->
+        <div class="adob-fifth-section__adob-cards-box4">
+          <!-- карточка 1 -->
+          <div
+            class="adob-fifth-section__adob-box4-item adob-box4-item icons_cards-item"
+          >
+            <img
+              src="./src/icons/adob_sec_4_icon1.svg"
+              alt="Картинка Покупка корма и инвентаря"
+              class="adob-box4-item__icon"
+            />
+            <p class="adob-box4-item__textOrange textOrange">
+              Покупку корма и инвентаря
+            </p>
+            <p class="adob-box4-item__textBlack textBlack">
+              Приютам необходимо покупать много корма для питомцев. Помимо
+              этого, они нуждаются в обновлении инвентаря и амуниции (ведра,
+              швабры, лежанки, когтеточки). <br />
+              Ваши пожертвования помогут вовремя обновлять инвентарь.
+            </p>
+          </div>
+          <!-- карточка 2 -->
+          <div
+            class="adob-fifth-section__adob-box4-item adob-box4-item icons_cards-item"
+          >
+            <img
+              src="./src/icons/adob_sec_4_icon2.svg"
+              alt="Картинка Покупка лекарств"
+              class="adob-box4-item__icon"
+            />
+            <p class="adob-box4-item__textOrange textOrange">
+              Покупку лекарств и вакцин
+            </p>
+            <p class="adob-box4-item__textBlack textBlack">
+              Все животные в приютах нуждаются в обработке от гельминтов и
+              клещей. Так же многим пожизненно необходимы лекарства. <br />
+              Вы можете помочь приютам приобрести необходимые медикаменты.
+            </p>
+          </div>
+          <!-- карточка 3 -->
+          <div
+            class="adob-fifth-section__adob-box4-item adob-box4-item icons_cards-item"
+          >
+            <img
+              src="./src/icons/adob_sec_4_icon3.svg"
+              alt="Картинка Лечение животных"
+              class="adob-box4-item__icon"
+            />
+            <p class="adob-box4-item__textOrange textOrange">
+              Лечение животных
+            </p>
+            <p class="adob-box4-item__textBlack textBlack">
+              В приютах живет много животных. Очень многим требуется лечение в
+              вет.клиниках. <br />
+              Ваше пожертвование может спасти жизнь!
+            </p>
+          </div>
+          <!-- карточка 4 -->
+          <div
+            class="adob-fifth-section__adob-box4-item adob-box4-item icons_cards-item"
+          >
+            <img
+              src="./src/icons/adob_sec_4_icon4.svg"
+              alt="Картинка улучшение условий жизни"
+              class="adob-box4-item__icon"
+            />
+            <p class="adob-box4-item__textOrange textOrange">
+              Улучшение условий жизни
+            </p>
+            <p class="adob-box4-item__textBlack textBlack">
+              Многим приютам нужны средства, чтобы починить или утеплить
+              вольеры, поменять полы, закупиться новым оборудованием и
+              игрушками. <br />
+              Ваше пожертвование поможет приютам купить необходимые материалы и
+              подготовиться к знойному лету или холодной зиме.
+            </p>
+          </div>
+        </div>
+        <button class="adob-fifth-section__btn button">Пожертовать</button>
+      </div>
+      <hr class="adob-fifth-section__line line" />
+    </section>
+    <!-------------------------------------->
+    <!-------------------------------------->
+    <!-- СЕДЬМАЯ СЕКЦИЯ Форма записи  -->
+
+    <section class="seventh-section">
+      <div class="seventh-section__container container">
+        <!-- wrapper для того чтобы flex раскинул текст и форму -->
+        <div class="seventh-section__wrapper">
+          <p class="seventh-section__text text-middle">
+            Получайте <span class="orange-word">Любовь</span> на свой<br />
+            почтовый ящик
+          </p>
+          <!-- Форма для почты -->
+          <div
+            class="seventh-section__subscription-form-container subscription-form"
+          >
+            <form
+              class="seventh-section__subscription-form subscription-form__formEmail"
+              action="#"
+              method="post"
+            >
+              <!-- Поле для строчки "Веддите эмаил" -->
+              <input
+                type="email"
+                name="userEmail"
+                placeholder="Enter your email"
+                required
+              />
+              <!-- Кнопка отправки емаила -->
+              <input type="submit" name="submit" value="Subscribe" />
+            </form>
+            <!-- Иконки соц-сетей -->
+            <ul class="seventh-section__icons-box icons-box">
+              <li class="icons-box__item">
+                <img src="./src/icons/facebook.svg" alt="facebook" />
+              </li>
+              <li class="icons-box__item">
+                <img src="./src/icons/instagramm.svg" alt="instagramm" />
+              </li>
+              <li class="icons-box__item">
+                <img src="./src/icons/telegramm.svg" alt="telegramm" />
+              </li>
+              <li class="icons-box__item">
+                <img src="./src/icons/vk.svg" alt="vk" />
+              </li>
+              <li class="icons-box__item">
+                <img src="./src/icons/youtube.svg" alt="youtube" />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-------------------------------------->
+    <!-------------------------------------->
+    <!-- ВОСЬМАЯ СЕКЦИЯ Футтер  -->
+
+    <footer class="footer-section">
+      <div class="footer-section__container container">
+        <div class="footer-section__orangeLine"></div>
+        <!-- wrapper для того чтобы все последующие дивы можно было разделить флексом -->
+        <div class="footer-section__wrapper">
+          <div class="footer-section__fotter-item fotter-item">
+            <img
+              src="./src/icons/LOGO.svg"
+              alt="LexVet Лого"
+              class="fotter-item__logo"
+            />
+          </div>
+          <!--  -->
+          <!-- СТОЛБЕЦ 1 - О НАС -->
+          <div class="footer-section__fotter-item fotter-item">
+            <p class="fotter-item__title textOrange">О НАС</p>
+            <ul class="fotter-item__list footer-list">
+              <li class="footer-list__item">
+                <a class="footer-list__link" href="#"> Кто мы </a>
+              </li>
+              <li class="footer-list__item">
+                <a class="footer-list__link" href="#"> Что мы делаем </a>
+              </li>
+              <li class="footer-list__item">
+                <a class="footer-list__link" href="#"> Финансы </a>
+              </li>
+              <li class="footer-list__item">
+                <a class="footer-list__link" href="#"> Наши партнеры </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- СТОЛБЕЦ 2 - НАША СЕМЬЯ -->
+          <div class="footer-section__fotter-item fotter-item">
+            <p class="fotter-item__title textOrange">НАША СЕМЬЯ</p>
+            <ul class="fotter-item__list footer-list">
+              <li class="footer-list__item">
+                <a class="footer-list__link" href="#"> LexVet Усыновление </a>
+              </li>
+              <li class="footer-list__item">
+                <a class="footer-list__link" href="#"> LexVet Поиск </a>
+              </li>
+              <li class="footer-list__item">
+                <a class="footer-list__link" href="#"> LexVet Забота </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- СТОЛБЕЦ 3 - ПАРТНЕРЫ -->
+          <div class="footer-section__fotter-item fotter-item">
+            <p class="fotter-item__title textOrange">ПАРТНЕРЫ</p>
+            <ul class="fotter-item__list footer-list">
+              <li class="footer-list__item">
+                <a class="footer-list__link" href="#"> RoyalConin </a>
+              </li>
+              <li class="footer-list__item">
+                <a class="footer-list__link" href="#"> Кот и Пес </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- СТОЛБЕЦ 4 - БОЛЬШЕ -->
+          <div class="footer-section__fotter-item fotter-item">
+            <p class="fotter-item__title textOrange">БОЛЬШЕ</p>
+            <ul class="fotter-item__list footer-list">
+              <li class="footer-list__item">
+                <a class="footer-list__link" href="#"> Поддержка </a>
+              </li>
+              <li class="footer-list__item">
+                <a class="footer-list__link" href="#"> Pr - отдел </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-------------------------------------->
+    <!-------------------------------------->
+    <!-- ДЕВЯТАЯ СЕКЦИЯ - ПРАВА ЗАЩИЩЕНЫ  -->
+
+    <section class="ninth-section">
+      <div class="ninth-section__container container">
+        <div class="ninth-section__greyLine"></div>
+        <div class="ninth-section__wrapper">
+          <p class="ninth-section__left-text text-superSmall">
+            Использование этого сервиса, веб-сайта или приложения означает
+            принятие всех условий, перечисленных выше. LexVet и связанные с ним
+            логотипы являются товарными знаками LexVet Animal Supplies,
+            Inc.™ 2024 , LexVet Love | LexVet Animal Supplies, Inc. Все права
+            защищены.
+          </p>
+          <div class="ninth-section__right-text right-text">
+            <p class="right-text__privacyPolicy text-superSmall">
+              Политика конфиденциальности 
+            </p>
+            <div class="right-text__line demarcationLine"></div>
+
+            <p class="right-text__termsOfService text-superSmall">
+              Условия обслуживания
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+
+  </body>
+</html>

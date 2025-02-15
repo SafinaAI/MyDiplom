@@ -1,0 +1,52 @@
+
+// ФОРМА ДЛЯ ПОЧТЫ
+
+.subscription-form
+    &__formEmail
+        display: flex
+        border: 0.2rem solid #fcf6f1 // Граница формы
+        border-radius: 1.5rem // Скругление углов
+        overflow: hidden // Скрытие краев
+        // background-color: #ff9a4b33 // Единый фон для формы
+        width: 50rem
+        @include respond(gorizontal-tab)
+            width: 45rem
+        @include respond(gorizontal-phone)
+            width: 80rem
+            margin-bottom: 5rem
+        input[type="email"] 
+            border: none
+            padding: 1.5rem
+            flex: 1 // Занять все доступное пространство
+            font-size: 1.8rem
+            color: #F19A56 // Цвет текста
+            background-color: #fcf6f1 // Тот же фон, что и у формы
+            &::placeholder 
+                color: #F19A56 // Цвет плейсхолдера
+            @include respond(gorizontal-tab)
+                font-size: 1.5rem
+            @include respond(gorizontal-phone)
+                font-size: 3rem
+                padding: 3rem 4rem
+        input[type="submit"] 
+            position: relative
+            border: none
+            padding: 1rem 2rem
+            font-size: 1.9rem
+            text-decoration: underline
+            cursor: pointer
+            background-color: #fcf6f1 // Цвет кнопки
+            color: #f6a15b // Цвет текста кнопки
+            transition: background-color 0.3s
+            // transition: text-decoration-color 0.3s
+            //.orange:color
+               // text-decoration-color: orange
+            &:hover
+                color: $color-orange-focus
+                text-transform: uppercase
+                transition: all 0.5s
+            @include respond(gorizontal-tab)
+                font-size: 1.5rem
+            @include respond(gorizontal-phone)
+                font-size: 3rem
+                padding: 3rem 4rem

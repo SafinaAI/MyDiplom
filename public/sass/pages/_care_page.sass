@@ -1,0 +1,260 @@
+.firstSec
+    &__container
+        width: 100%
+        display: flex
+        justify-content: space-around
+        text-align: center
+        align-items: center
+.leftWrapper
+    position: relative
+    &__title
+        font-size: 4.2rem
+        font-weight: 700
+        margin-top: 6rem
+        margin-bottom: 5.5rem
+        line-height: 5.7rem
+        text-align: center
+        color: #F19A56
+    &__text
+        font-size: 3.2rem
+        font-weight: 400
+        margin-bottom: 5.5rem
+        line-height: 4.7rem
+        text-align: center
+    &__btn
+        margin-bottom: 3rem
+    &__btn-searchProf
+        width: 20rem
+        height: 6rem
+        margin-right: 3rem
+        color: #ffffff
+        padding: .5rem
+    &__btn-loadService
+        width: 20rem
+        height: 6rem
+        color: #ffffff
+.rightWrapper
+    position: relative
+    
+    &__img
+        position: relative
+        width: 65%
+
+
+
+.searchSection
+    margin-bottom: 5rem
+    &__container
+        width: 100%
+        justify-content: space-around
+        text-align: center
+        align-items: center
+        background-color: #FFB175
+        border-radius: 5rem
+        box-shadow: -0.1rem 0.5rem 1.1rem 0.2rem rgba(34, 60, 80, 0.2)
+
+    &__wrapper
+        padding: 4.5rem 6.5rem
+    &__title 
+        font-size: 3.2rem
+        font-weight: 700
+        margin-bottom: 2.5rem
+        line-height: 4.7rem
+        text-align: left
+        color: #ffffff
+    &__searchBoxContainer
+        position: relative
+        display: flex
+        align-items: center
+
+    &__search-box 
+        box-shadow: -0.1rem 0.5rem 1.1rem 0.2rem rgba(34, 60, 80, 0.2)
+        width: 100%
+        padding: 2rem
+        padding-left: 5rem
+        border: 2px solid #ffab91
+        border-radius: 5rem
+        font-size: 17px
+        outline: none
+        padding-right: 40px
+    &__search-button 
+        position: absolute
+        right: 10px
+        background: none
+        border: none
+        cursor: pointer
+        box-shadow: none
+        img 
+            width: 30px
+            height: 30px
+        &:hover
+            background-color: white
+            box-shadow: none
+            transform: scale(1.1)
+
+        &:active
+            background-color: white
+            box-shadow: none
+            transform: scale(0.9)
+    &__quick-search 
+        display: flex
+        justify-content: center
+        margin-top: 1.5rem
+        flex-wrap: nowrap
+        a 
+            color: white
+            cursor: pointer
+            font-size: 16px
+            margin-right: 3.5rem
+        a:last-child
+            margin-right: 0
+        a:hover             
+            text-transform: uppercase
+            padding: 5px 10px
+            border-radius: 20px
+            background-color: #F19A56
+
+.thirdSec
+    margin-bottom: 5rem
+    &__container
+        width: 100%
+        background-color: #FFF8F3
+        border-radius: 5rem
+        box-shadow: -0.1rem 0.5rem 1.1rem 0.2rem rgba(34, 60, 80, 0.2)
+    &__wrapper
+        padding: 4.5rem 6.5rem
+    &__title
+        font-size: 3.2rem
+        font-weight: 700
+        margin-bottom: 2.5rem
+        line-height: 4.7rem
+    &__text
+        font-size: 3.2rem
+        font-weight: 400
+        line-height: 4.7rem
+
+
+.bestSpec
+    margin-bottom: 7rem
+    &__container
+        width: 100%
+        background-color: #ffffff
+        border-radius: 5rem
+        box-shadow: -0.1rem 0.5rem 1.1rem 0.2rem rgba(34, 60, 80, 0.2)
+    &__wrapper
+        padding: 4.5rem 6.5rem
+    &__title       
+        font-size: 4.2rem
+        font-weight: 700
+        margin-top: 2rem
+        margin-bottom: 3rem
+        line-height: 5.7rem
+        text-align: center
+        color: #2E2E2E
+    &__cards
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        gap: 2rem
+        margin-top: 2rem
+        @media (max-width: 1024px)
+            grid-template-columns: repeat(2, 1fr)
+        @media (max-width: 768px)
+            grid-template-columns: 1fr
+    &__card
+        background-color: #fff
+        border-radius: 2rem
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+        text-align: center
+        padding: 1.5rem
+        transition: transform 0.3s ease
+        &:hover
+            transform: translateY(-10px)
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2)
+    &__cardImg
+        width: 220px
+        height: 220px
+        border-radius: 1.2rem
+        object-fit: cover
+        margin-bottom: .4rem
+    &__cardName
+        font-size: 1.5rem
+        font-weight: 600
+        color: #333
+        margin-bottom: .4rem
+    &__cardRating
+        font-size: 1.5rem
+        color: #f19a56
+        margin-bottom: 0.2rem
+    &__cardReviews
+        font-size: 1.3rem
+        color: #666
+        
+        
+.fourthSec
+    margin-bottom: 5rem
+    &__container
+        width: 100%
+        border-radius: 5rem
+        box-shadow: -0.1rem 0.5rem 1.1rem 0.2rem rgba(34, 60, 80, 0.2)
+        background-color: #FFFCF3
+    &__wrapper
+        padding: 5.5rem 6.5rem
+        padding-bottom: 0
+    &__wrap
+        position: relative
+        display: flex
+        justify-content: space-between
+        gap: 2rem
+    &__leftWrap
+        flex: 1
+        position: relative
+    &__title
+        font-size: 2.8rem
+        font-weight: 700
+        margin-top: .2rem
+        margin-bottom: 3rem
+        line-height: 3.7rem
+        text-align: left
+        
+    &__img
+        position: absolute
+        bottom: 1rem
+        right: 0
+        width: auto
+        height: 310px   // Устанавливаем фиксированную высоту
+        max-width: 360px
+        transition: transform 0.3s ease
+        
+    &__rightWrap
+        flex: 1
+        padding-left: 2rem
+    &__text
+        font-size: 2.8rem
+        font-weight: 400
+        line-height: 3.7rem
+
+.fifthSec
+    margin-bottom: 7rem
+    &__container       
+        width: 100%
+        border-radius: 5rem
+        box-shadow: -0.1rem 0.5rem 1.1rem 0.2rem rgba(34, 60, 80, 0.2)
+        background-color: #FFF8F3
+    &__wrapper
+        padding: 4.5rem 6.5rem
+        display: flex
+        flex-direction: column
+        align-items: center
+    &__title
+        font-size: 3.5rem
+        font-weight: 700
+        margin-bottom: 3.5rem
+        line-height: 5.7rem
+        text-align: center
+    &__button        
+        width: 22rem
+        height: 6rem
+        margin-right: 3rem
+        color: #ffffff
+        padding: .5rem
+        

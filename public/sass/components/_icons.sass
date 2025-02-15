@@ -1,0 +1,20 @@
+
+// общий код для карточек в 3 и 5 секциях. Карточки с иконками
+    
+.icons_cards-item
+    position: relative
+    width: 36rem
+    height: 36rem
+    border-radius: 5rem
+    padding-top: 1.5rem
+    box-shadow: -0.1rem 0.5rem 1.1rem 0.2rem rgba(34, 60, 80, 0.2)
+    transition: all .3s
+    @include respond(vertical-tab)
+        width: 25%
+        height: auto
+    @include respond(gorizontal-tab)
+        width: 100%
+    &__icon
+        &:hover
+            transform: scale(1.1) rotateZ(3deg)
+    

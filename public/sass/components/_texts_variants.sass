@@ -1,0 +1,32 @@
+.text-small // можно сказать стандартный текст на всей странице
+    font-size: 3.5rem
+    font-weight: 400
+    @include respond(gorizontal-phone)
+        font-size: 6.5rem
+
+.text-big // это самй боьшой тест на странице , преминяется для заголовков секций
+    font-size: 5rem
+    font-weight: 400  
+    line-height: 6.5rem
+
+.text-middle // применяется в нескольких местах для текста , который меньще чем биг, но больше чем смолл
+    line-height: 5.5rem
+
+.text-superSmall // применяется в 4-ой секции
+    font-size: 1.5rem
+    font-weight: 400  
+
+.textOrange 
+    font-size: 3.2rem
+    font-weight: 700
+    color: $color-orange
+    @include respond(gorizontal-tab)
+        font-size: 2.3rem
+
+.textBlack
+    font-size: 2rem
+    @include respond(gorizontal-tab)
+        font-size: 1.8rem
+
+.orange-word // окрашивает слова в оранжевый
+    color: $color-orange

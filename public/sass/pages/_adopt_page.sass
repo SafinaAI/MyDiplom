@@ -1,0 +1,557 @@
+// ------------ ФОТО + ФОРМА -------------
+
+.adob-first-section
+    margin-bottom: 6rem
+    &__container
+        max-width: 1260px
+        margin: 0 auto
+        position: relative
+        padding: 0rem 3.8rem
+        overflow: hidden
+        height: 40vh
+        @include respond(gorizontal-phone)
+            height: auto
+            display: flex
+            flex-direction: column          
+    &__text-wrapper
+        display: flex
+        flex-direction: column
+        align-items: center
+        text-align: center  
+        @include respond(gorizontal-phone) 
+    &__title
+        position: absolute
+        top: 8rem
+        color: #ff6800
+        @include respond(gorizontal-phone)
+
+    &__text
+        position: absolute
+        top: 17rem
+        color: #ff6800
+        @include respond(gorizontal-phone)
+            line-height: 6rem
+            font-size: 6rem
+            width: 70%
+        
+    &__btns
+        position: absolute
+        display: flex
+        justify-content: space-between
+        top: 24rem
+        @include respond(gorizontal-phone)
+            flex-direction: column
+            top: 31rem
+    &__btns-animals
+        margin-right: 5rem
+        width: 18rem
+        height: 6rem
+        @include respond(gorizontal-phone)
+            width: 35rem
+            height: 12rem
+            font-size: 4rem
+            padding: 2rem 2rem
+            margin-bottom: 2rem
+    &__btns-donat
+        width: 18rem
+        height: 6rem
+        @include respond(gorizontal-phone)
+            width: 35rem
+            height: 12rem
+            font-size: 4rem
+            padding: 2rem 2rem
+
+
+// ЖИВОТНЫЕ ГОТОВЫЕ К УСЫНОВЛЕНИЮ
+
+
+.adob-second-section
+    &__container
+        text-align: center
+        
+    &__text-small
+        margin-bottom: 5rem
+        @include respond(gorizontal-tab)
+            font-size: 3rem
+            margin-bottom: 2rem
+        @include respond(gorizontal-phone)
+            font-size: 4rem
+            margin-bottom: 3rem
+    &__text-big
+        margin-bottom: 5rem
+        @include respond(gorizontal-tab)
+            font-size: 4.5rem
+            margin-bottom: 5rem
+        @include respond(gorizontal-phone)
+            font-size: 5rem
+    &__btn
+        width: 40rem
+        height: 8rem
+        font-size: 4rem
+        margin-bottom: 5rem
+        &:focus, &:hover
+            font-size: 4rem
+        @include respond(gorizontal-phone)
+            width: 30%
+            height: 9rem
+            padding: 3rem
+            &:focus, &:hover
+                width: 40%
+                height: 9rem
+                padding: 3rem
+                font-size: 3.6rem
+        @include respond(vertical-phone)
+            width: 40%
+            height: 9rem
+            padding: 3rem
+            &:focus, &:hover
+                width: 40%
+                height: 9rem
+                padding: 3rem
+                font-size: 3.6rem
+    &__line
+        margin-bottom: 6rem
+        @include respond(gorizontal-tab)
+            margin-bottom: 7rem
+    &__adob-cards-box1
+        display: flex
+        flex-direction: row
+        margin-bottom: 6rem
+        @include respond(gorizontal-phone)
+            display: grid
+            grid-template-columns: 40% 40% 
+            justify-content: center
+            grid-column-gap: 5rem
+            grid-row-gap: 5rem
+    &__adob-box1-item
+        margin-right: 2.2rem       
+        &:last-child
+            margin-right: 0
+        &:hover
+            transform: scale(1.1) rotateZ(2deg)
+        @include respond(gorizontal-phone)
+            margin-right: 0
+            width: 80%
+            
+.adob-box1-item
+    position: relative
+    width: 37rem
+    box-shadow: -0.1rem 0.5rem 1.1rem 0.2rem rgba(34, 60, 80, 0.2)
+    border-radius: 5rem
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    flex: 1
+    align-items: center
+    @include respond(gorizontal-phone)
+        width: 100%
+        margin-bottom: 0
+    &__img
+        width: 100%
+        margin-bottom: 3rem
+        border-radius: 5rem
+        height: 220px            // Задаем фиксированную высоту для изображений
+        object-fit: cover
+        @include respond(gorizontal-phone)
+            height: 120px
+            margin-bottom: 5rem
+    &__pet-name
+        margin-bottom: 1.5rem
+        @include respond(gorizontal-phone)
+            font-size: 4rem
+            margin-bottom: 2.5rem
+    &__pet-age
+        @include respond(gorizontal-phone)
+            font-size: 3.5rem
+            margin-bottom: 2rem
+    &__pet-city
+        margin-bottom: 3rem
+        @include respond(gorizontal-phone)
+            font-size: 3.5rem
+
+
+//ЖИВОТНЫЕ НУЖДАЮЩИЕСЯ В ПОМОЩИ
+
+.adob-third-section
+    &__container
+        text-align: center
+    &__text-small
+        margin-bottom: 5rem
+        @include respond(gorizontal-tab)
+            font-size: 3rem
+            margin-bottom: 2rem
+        @include respond(gorizontal-phone)
+            font-size: 4rem
+            margin-bottom: 3rem
+    &__text-big
+        margin-bottom: 5rem
+        @include respond(gorizontal-tab)
+            font-size: 4.5rem
+        @include respond(gorizontal-phone)
+            font-size: 5rem
+    &__btn
+        width: 40rem
+        height: 8rem
+        font-size: 4rem
+        margin-bottom: 5rem
+        &:focus, &:hover
+            font-size: 4rem
+        @include respond(gorizontal-phone)
+            width: 30%
+            height: 9rem
+            padding: 3rem
+            &:focus, &:hover
+                width: 40%
+                height: 9rem
+                padding: 3rem
+                font-size: 3.6rem
+        @include respond(vertical-phone)
+            width: 40%
+            height: 9rem
+            padding: 3rem
+            &:focus, &:hover
+                width: 40%
+                height: 9rem
+                padding: 3rem
+                font-size: 3.6rem
+    &__line
+        margin-bottom: 5rem
+        @include respond(gorizontal-tab)
+            margin-bottom: 7rem
+    &__adob-cards-box2
+        display: flex
+        flex-direction: row
+        margin-bottom: 5rem 
+        @include respond(gorizontal-phone)
+            display: grid
+            grid-template-columns: 40% 40% 
+            justify-content: center
+            grid-column-gap: 5rem
+            grid-row-gap: 5rem
+            margin-bottom: 5rem
+    &__adob-box2-item
+        margin-right: 2.2rem       
+        &:last-child
+            margin-right: 0
+        &:hover
+            transform: scale(1.1) rotateZ(2deg)
+        @include respond(gorizontal-phone)
+            margin-right: 0
+            width: 80%
+
+.adob-box2-item
+    position: relative
+    width: 37rem
+    box-shadow: -0.1rem 0.5rem 1.1rem 0.2rem rgba(34, 60, 80, 0.2)
+    border-radius: 5rem
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    flex: 1
+    align-items: center
+    @include respond(gorizontal-phone)
+        width: 100%
+        margin-bottom: 0
+    &__img
+        width: 100%
+        margin-bottom: 3rem
+        border-radius: 5rem
+        height: 220px            // Задаем фиксированную высоту для изображений
+        object-fit: cover
+        @include respond(gorizontal-phone)
+            height: 120px
+            margin-bottom: 5rem
+    &__pet-name
+        margin-bottom: 1.5rem
+        @include respond(gorizontal-phone)
+            font-size: 4rem
+            margin-bottom: 2.5rem
+    &__pet-age
+        @include respond(gorizontal-phone)
+            font-size: 3.5rem
+            margin-bottom: 2rem
+    &__pet-city
+        margin-bottom: 1.5rem
+        @include respond(gorizontal-phone)
+            font-size: 3.5rem
+            margin-bottom: 4rem
+    &__pet-btn
+        margin-bottom: 3rem
+        &:focus, &:hover
+            padding: 0 .2rem
+            width: 15.5rem
+        @include respond(gorizontal-phone)
+            font-size: 4rem
+            height: 10rem
+            width: 70%
+            margin-bottom: 5rem
+            &:focus, &:hover
+                padding: 0 .2rem
+                width: 80%
+                height: 10rem
+                padding: 2rem
+                font-size: 4rem
+        @include respond(vertical-phone)
+            font-size: 3.5rem
+            height: 9rem
+            width: 80%
+            margin-bottom: 5rem
+            &:focus, &:hover
+                padding: 0 .2rem
+                width: 85%
+                height: 9rem
+                padding: 2rem
+                font-size: 3.5rem
+
+
+//СЧАСТЛИВЫЕ ИСТОРИИ ПОДПИСЧИКОВ
+.adob-fourth-section
+    &__container
+        position: relative
+        text-align: center
+    &__text-small
+        margin-bottom: 3rem
+        @include respond(gorizontal-tab)
+            font-size: 3rem
+            margin-bottom: 2rem
+        @include respond(gorizontal-tab)
+            font-size: 3rem
+            margin-bottom: 2rem
+    &__text-big
+        margin-bottom: 3rem 
+        @include respond(gorizontal-tab)
+            font-size: 4.5rem 
+        @include respond(gorizontal-phone)
+            font-size: 5rem         
+    &__adob-cards-box3
+        display: flex
+        flex-direction: row
+        margin-bottom: 5rem
+        @include respond(gorizontal-phone)
+            display: grid
+            grid-template-columns: 40% 40% 
+            justify-content: center
+            grid-column-gap: 5rem
+            grid-row-gap: 5rem
+    &__adob-box3-item
+        margin-right: 3rem
+        &:last-child
+            margin-right: 0
+        @include respond(gorizontal-phone)
+            margin-right: 0
+            width: 80%
+    &__dots
+    &__line
+        margin-bottom: 5rem
+        @include respond(gorizontal-tab)
+            margin-bottom: 7rem
+    &__btn
+        width: 40rem
+        height: 8rem
+        font-size: 4rem
+        margin-bottom: 5rem
+        &:focus, &:hover
+            font-size: 4rem
+        @include respond(gorizontal-phone)
+            width: 30%
+            height: 9rem
+            padding: 3rem
+            &:focus, &:hover
+                width: 40%
+                height: 9rem
+                padding: 3rem
+                font-size: 3.6rem
+        @include respond(vertical-phone)
+            width: 40%
+            height: 9rem
+            padding: 3rem
+            &:focus, &:hover
+                width: 40%
+                height: 9rem
+                padding: 3rem
+                font-size: 3.6rem
+
+.adob-box3-item
+    position: relative
+    width: 37rem
+    box-shadow: -0.1rem 0.5rem 1.1rem 0.2rem rgba(34, 60, 80, 0.2)
+    border-radius: 5rem
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    flex: 1
+    align-items: center
+    margin-bottom: 5rem
+    @include respond(gorizontal-phone)
+        width: 100%
+        margin-bottom: 0
+    &__left-arrow
+        margin-right: 1.3rem
+    &__right-arrow
+        margin-left: 1.3rem
+    &__img
+        margin-bottom: 3.5rem
+        border-radius: 5rem
+        width: 100%
+        height: 25rem
+        object-fit: cover
+        &:hover
+            transform: scale(1.1) rotateZ(2deg)
+        @include respond(gorizontal-phone)
+            height: 120px
+            margin-bottom: 5rem
+    &__text-title
+        font-size: 3rem
+        margin-bottom: 1.5rem
+        @include respond(gorizontal-phone)
+            font-size: 4.5rem
+            margin-bottom: 2.5rem
+    &__wrapper-textInfo
+        max-height: 15rem
+        overflow: hidden
+        margin-bottom: 3rem
+        @include respond(gorizontal-phone)
+            margin-bottom: 5rem
+    &__text-info
+        // margin-bottom: 3.5rem
+        padding: 0rem 2rem
+        @include respond(gorizontal-phone)
+            font-size: 3.5rem
+            margin-bottom: 2rem
+            line-height: 4.5rem
+    &__btn
+        margin-bottom: 2rem
+        margin-top: auto
+        width: 50%
+        @include respond(gorizontal-phone)
+            width: 55%
+            height: 9rem
+            padding: 3rem
+            margin-bottom: 5rem
+            &:focus, &:hover
+                width: 60%
+                height: 9rem
+                padding: 3rem
+                font-size: 3.6rem
+
+
+//КУДА УЙДУТ ДЕНЬГИ С ПОЖЕРТВОВАНИЙ
+
+.adob-fifth-section
+    &__container
+        position: relative
+        text-align: center
+    &__color-wrap
+        background-color: #FFF8F3
+        border-radius: 3rem
+        box-shadow: 0.1rem 0.2rem 0.8rem 0.1rem rgba(34, 60, 80, 0.21)
+        padding: 4rem 4rem
+        margin-bottom: 5rem
+        @include respond(gorizontal-phone)
+            margin-bottom: 7rem
+            padding-top: 6rem
+    &__text-small
+        margin-bottom: 1.5rem
+        @include respond(gorizontal-tab)
+            font-size: 3rem
+            margin-bottom: 2rem
+        @include respond(gorizontal-phone)
+            font-size: 4rem
+            margin-bottom: 3rem
+    &__text-big
+        // margin-bottom: 5rem
+        @include respond(gorizontal-tab)
+            font-size: 4rem
+            line-height: 5.6rem
+        @include respond(gorizontal-phone)
+            font-size: 5rem
+            line-height: 6.5rem
+    &__text-descript
+        margin-bottom: 5rem
+        @include respond(gorizontal-tab)
+            font-size: 3rem
+            margin-bottom: 4rem
+        @include respond(gorizontal-phone)
+            font-size: 4rem
+            margin-bottom: 5rem
+    &__line
+        margin-bottom: 5rem
+        @include respond(gorizontal-tab)
+            margin-bottom: 7rem
+    &__btn
+        width: 40rem
+        height: 8rem
+        font-size: 4rem
+        margin-bottom: 5rem
+        &:focus, &:hover
+            font-size: 4rem
+        @include respond(gorizontal-phone)
+            width: 30%
+            height: 9rem
+            padding: 3rem
+            &:focus, &:hover
+                width: 30%
+                height: 9rem
+                padding: 3rem
+                font-size: 3.6rem
+        @include respond(vertical-phone)
+            width: 30%
+            height: 9rem
+            padding: 3rem
+            &:focus, &:hover
+                width: 40%
+                height: 9rem
+                padding: 3rem
+                font-size: 3.6rem
+    &__adob-cards-box4
+        // display: grid
+        // grid-template-columns: repeat(2, 1fr) 
+        // gap: 2.5rem 
+        // margin-bottom: 5rem
+        display: grid
+        grid-template-columns: 40% 40% 
+        justify-content: center
+        grid-column-gap: 5rem
+        grid-row-gap: 5rem
+        margin-bottom: 12rem
+    &__adob-box4-item
+        // margin-right: 2.2rem
+        // &:last-child
+        //     margin-right: 0
+        @include respond(gorizontal-phone)
+            margin-right: 0
+            width: 80%
+.adob-box4-item
+    // margin-bottom: 5rem  
+    @include respond(gorizontal-phone)
+        width: 60rem
+    &__icon
+        width: 35%
+        margin-bottom: 2.5rem
+        &:hover
+            transform: scale(1.1) rotateZ(3deg)   
+        @include respond(gorizontal-phone)
+            width: 30%    
+            margin-bottom: 3rem
+    &__textOrange
+        margin-bottom: 1.5rem
+        font-size: 3.5rem
+        padding: 0 1rem
+        line-height: 4rem
+        @include respond(gorizontal-phone)
+            font-size: 4.5rem
+            padding: 0 2rem
+            margin-bottom: 2rem
+    &__textBlack
+        font-size: 2.5rem
+        padding: 0 2.5rem
+        line-height: 3.5rem
+        margin-bottom: 2.5rem
+        @include respond(gorizontal-phone)
+            font-size: 4rem
+            line-height: 5rem
+            padding: 0 3rem
+.icons_cards-item
+    height: auto
+    width: 100%
+      

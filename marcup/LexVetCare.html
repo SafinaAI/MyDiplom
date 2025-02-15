@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Khula:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <title>Lexvet Забота</title>
+  </head>
+  <header class="section-header">
+    <!-------------------------------------->
+    <!-------------------------------------->
+    <!-- Верхняя часть навигации ( гавигация по продуктам) -->
+    <div class="section-header__firstNav firstNav firstNav__container">
+      <ul class="firstNav__list">
+        <li class="firstNav__list-item">
+          <a href="./LexVetAdopt.html"> LexVet Усыновление</a>
+        </li>
+        <div class="firstNav__hr demarcationLine"></div>
+        <li class="firstNav__list-item">
+          <a href="#">LexVet Поиск</a>
+        </li>
+        <div class="firstNav__hr demarcationLine"></div>
+        <li class="firstNav__list-item">
+          <a href="#">LexVet Забота</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-------------------------------------->
+    <!-------------------------------------->
+    <!-- Основное меню по странице -->
+    <div class="section-header__container container">
+      <!-- Лого меню -->
+      <a class="section-header__logo-link" href="./index.html">
+        <img
+          src="./src/icons/LOGO.svg"
+          alt="Logo"
+          class="section-header__logo"
+        />
+      </a>
+      <!-- Блок меню -->
+      <nav class="section-header__nav nav-menu">
+        <ul class="nav-menu__list">
+          <li class="nav-menu__list-item">
+            <a href="#">Кто мы</a>
+          </li>
+          <li class="nav-menu__list-item">
+            <a href="#">Что мы делаем</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- Блок кнопок в меню -->
+      <div class="section-header__btns buttons">
+        <button class="buttons__LogIn">Регистрация</button>
+        <button class="buttons__LogUp">Поддержать</button>
+      </div>
+    </div>
+  </header>
+  <body class="care-app">
+    <section class="firstSec">
+      <div class="firstSec__container container">
+        <div class="leftWrapper">
+          <h1 class="leftWrapper__title">
+            Любимым хвостикам только проверенные специалисты!
+          </h1>
+          <h2 class="leftWrapper__text">
+            Мы за то, чтобы животные получали качественные услуги
+          </h2>
+          <div class="leftWrapper__btn button">
+            <button class="leftWrapper__btn-searchProf">
+              Найти специалиста
+            </button>
+            <button class="leftWrapper__btn-loadService">
+              Выложить услугу
+            </button>
+          </div>
+        </div>
+        <div class="rightWrapper">
+          <img
+            src="./src/img/carePageDog.png"
+            alt="Фото_собаки"
+            class="rightWrapper__img"
+          />
+        </div>
+      </div>
+    </section>
+    <section class="searchSection">
+      <div class="searchSection__container container">
+        <div class="searchSection__wrapper">
+          <h2 class="searchSection__title">
+            Найдите того, кто подарит вашему хвостику заботу и любовь!
+          </h2>
+          <div class="searchSection__searchBoxContainer">
+            <input
+              type="text"
+              class="searchSection__search-box"
+              placeholder="Поиск специалиста ..."
+              aria-label="Введите запрос для поиска специалиста"
+            />
+            <button class="searchSection__search-button" type="submit">
+              <img src="./src/icons/dog-paw.svg" class="" alt="Лапка" />
+            </button>
+          </div>
+          <div class="searchSection__quick-search">
+            <a href="#" data-profession="врачи">Врачи</a>
+            <a href="#" data-profession="кинологи">Кинологи</a>
+            <a href="#" data-profession="грумеры">Грумеры</a>
+            <a href="#" data-profession="передержка">Передержка</a>
+            <a href="#" data-profession="догситтеры">Догситтеры</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="thirdSec">
+      <div class="thirdSec__container container">
+        <div class="thirdSec__wrapper">
+          <h3 class="thirdSec__title">Это важно при выборе специалиста</h3>
+          <p class="thirdSec__text">
+            Выбирая специалиста, доверьтесь не только рейтингу, но и своему
+            сердцу. Почитайте отзывы, посмотрите работы — важно, чтобы в них
+            чувствовалась любовь к животным. Задайте пару вопросов, а если
+            питомец останется у специалиста, уточните, сможет ли он присылать
+            новости. Пусть ваш хвостик будет в заботливых и надёжных руках!
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="bestSpec">
+      <div class="bestSpec__container container">
+        <div class="bestSpec__wrapper">
+          <h2 class="bestSpec__title">
+            Лучшие из лучших — проверено <br />
+            <span class="orange-word">любовью</span>!
+          </h2>
+          <div class="bestSpec__cards">
+            <!-- карточка 1 -->
+            <div class="bestSpec__card">
+              <!-- добавлением атрибута loading="lazy" для ускорения загрузки 
+               страницы и улучшения производительности. -->
+              <img
+                loading="lazy"
+                src="./src/img/груммер1 1.png"
+                alt="Специалист 1"
+                class="bestSpec__cardImg"
+              />
+              <h3 class="bestSpec__cardName">Груммер Таня</h3>
+              <div class="bestSpec__cardRating">
+                <span>★★★★★</span>
+              </div>
+              <p class="bestSpec__cardReviews">150 отзывов</p>
+            </div>
+            <!-- карточка 2 -->
+            <div class="bestSpec__card">
+              <img
+                loading="lazy"
+                src="./src/img/груммер2.png"
+                alt="Специалист 2"
+                class="bestSpec__cardImg"
+              />
+              <h3 class="bestSpec__cardName">Груммер Катя</h3>
+              <div class="bestSpec__cardRating">
+                <span>★★★★★</span>
+              </div>
+              <p class="bestSpec__cardReviews">120 отзывов</p>
+            </div>
+            <!-- карточка 3 -->
+            <div class="bestSpec__card">
+              <img
+                loading="lazy"
+                src="./src/img/груммер3.png"
+                alt="Специалист 3"
+                class="bestSpec__cardImg"
+              />
+              <h3 class="bestSpec__cardName">Груммер Валерия</h3>
+              <div class="bestSpec__cardRating">
+                <span>★★★★★</span>
+              </div>
+              <p class="bestSpec__cardReviews">100 отзывов</p>
+            </div>
+            <!-- карточка 4 -->
+            <div class="bestSpec__card">
+              <img
+                loading="lazy"
+                src="./src/img/ветврач1.png"
+                alt="Специалист 4"
+                class="bestSpec__cardImg"
+              />
+              <h3 class="bestSpec__cardName">Хирург Иван</h3>
+              <div class="bestSpec__cardRating">
+                <span>★★★★★</span>
+              </div>
+              <p class="bestSpec__cardReviews">90 отзывов</p>
+            </div>
+            <!-- карточка 5 -->
+            <div class="bestSpec__card">
+              <img
+                loading="lazy"
+                src="./src/img/ветврач2.png"
+                alt="Специалист 5"
+                class="bestSpec__cardImg"
+              />
+              <h3 class="bestSpec__cardName">Ортопед Дмитрий</h3>
+              <div class="bestSpec__cardRating">
+                <span>★★★★★</span>
+              </div>
+              <p class="bestSpec__cardReviews">85 отзывов</p>
+            </div>
+            <!-- карточка 6 -->
+            <div class="bestSpec__card">
+              <img
+                loading="lazy"
+                src="./src/img/ветврач3.png"
+                alt="Специалист 6"
+                class="bestSpec__cardImg"
+              />
+              <h3 class="bestSpec__cardName">Терапевт Денис</h3>
+              <div class="bestSpec__cardRating">
+                <span>★★★★★</span>
+              </div>
+              <p class="bestSpec__cardReviews">105 отзывов</p>
+            </div>
+            <!-- карточка 7 -->
+            <div class="bestSpec__card">
+              <img
+                loading="lazy"
+                src="./src/img/груммер1 1.png"
+                alt="Специалист 7"
+                class="bestSpec__cardImg"
+              />
+              <h3 class="bestSpec__cardName">Догситтер Аня</h3>
+              <div class="bestSpec__cardRating">
+                <span>★★★★★</span>
+              </div>
+              <p class="bestSpec__cardReviews">113 отзывов</p>
+            </div>
+            <!-- карточка 8 -->
+            <div class="bestSpec__card">
+              <img
+                loading="lazy"
+                src="./src/img/груммер1 1.png"
+                alt="Специалист 8"
+                class="bestSpec__cardImg"
+              />
+              <h3 class="bestSpec__cardName">Диетолог Василий</h3>
+              <div class="bestSpec__cardRating">
+                <span>★★★★★</span>
+              </div>
+              <p class="bestSpec__cardReviews">98 отзывов</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="fourthSec">
+      <div class="fourthSec__container container">
+        <div class="fourthSec__wrapper">
+          <div class="fourthSec__wrap">
+            <div class="fourthSec__leftWrap">
+              <h3 class="fourthSec__title">
+                Дарите <span class="orange-word">любовь</span> — становитесь
+                другом для хвостиков!
+              </h3>
+              <img
+                src="./src/img/LexVet_Care_кошка.png"
+                alt=""
+                class="fourthSec__img"
+              />
+            </div>
+            <div class="fourthSec__rightWrap">
+              <p class="fourthSec__text">
+                Любите животных и хотите дарить им заботу? Присоединяйтесь к
+                нашей тёплой команде специалистов! Расскажите о себе, своих
+                услугах и находите новых пушистых друзей. Давайте вместе делать
+                этот мир добрее —
+                <span class="orange-word">лапка к лапке!</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="fifthSec">
+      <div class="fifthSec__container container">
+        <div class="fifthSec__wrapper">
+          <h2 class="fifthSec__title">
+            Поделитесь своей заботой — станьте
+            <span class="orange-word">другом</span> для хвостиков!
+          </h2>
+          <button class="fifthSec__button button">Добавить резюме</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="seventh-section">
+      <div class="seventh-section__container container">
+        <!-- wrapper для того чтобы flex раскинул текст и форму -->
+        <div class="seventh-section__wrapper">
+          <p class="seventh-section__text text-middle">
+            Получайте <span class="orange-word">Любовь</span> на свой<br />
+            почтовый ящик
+          </p>
+          <!-- Форма для почты -->
+          <div
+            class="seventh-section__subscription-form-container subscription-form"
+          >
+            <form
+              class="seventh-section__subscription-form subscription-form__formEmail"
+              action="#"
+              method="post"
+            >
+              <!-- Поле для строчки "Веддите эмаил" -->
+              <input
+                type="email"
+                name="userEmail"
+                placeholder="Enter your email"
+                required
+              />
+              <!-- Кнопка отправки емаила -->
+              <input type="submit" name="submit" value="Subscribe" />
+            </form>
+            <!-- Иконки соц-сетей -->
+            <ul class="seventh-section__icons-box icons-box">
+              <li class="icons-box__item">
+                <img src="./src/icons/facebook.svg" alt="facebook" />
+              </li>
+              <li class="icons-box__item">
+                <img src="./src/icons/instagramm.svg" alt="instagramm" />
+              </li>
+              <li class="icons-box__item">
+                <img src="./src/icons/telegramm.svg" alt="telegramm" />
+              </li>
+              <li class="icons-box__item">
+                <img src="./src/icons/vk.svg" alt="vk" />
+              </li>
+              <li class="icons-box__item">
+                <img src="./src/icons/youtube.svg" alt="youtube" />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer-section">
+      <div class="footer-section__container container">
+        <div class="footer-section__orangeLine"></div>
+        <!-- wrapper для того чтобы все последующие дивы можно было разделить флексом -->
+        <div class="footer-section__wrapper">
+          <div class="footer-section__fotter-item fotter-item">
+            <img
+              src="./src/icons/LOGO.svg"
+              alt="LexVet Лого"
+              class="fotter-item__logo"
+            />
+          </div>
+          <!--  -->
+          <!-- СТОЛБЕЦ 1 - О НАС -->
+          <div class="footer-section__fotter-item fotter-item">
+            <p class="fotter-item__title textOrange">О НАС</p>
+            <ul class="fotter-item__list footer-list">
+              <li class="footer-list__item">
+                <a class="footer-list__link" href="#"> Кто мы </a>
+              </li>
+              <li class="footer-list__item">
+                <a class="footer-list__link" href="#"> Что мы делаем </a>
+              </li>
+              <li class="footer-list__item">
+                <a class="footer-list__link" href="#"> Финансы </a>
+              </li>
+              <li class="footer-list__item">
+                <a class="footer-list__link" href="#"> Наши партнеры </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- СТОЛБЕЦ 2 - НАША СЕМЬЯ -->
+          <div class="footer-section__fotter-item fotter-item">
+            <p class="fotter-item__title textOrange">НАША СЕМЬЯ</p>
+            <ul class="fotter-item__list footer-list">
+              <li class="footer-list__item">
+                <a class="footer-list__link" href="#"> LexVet Усыновление </a>
+              </li>
+              <li class="footer-list__item">
+                <a class="footer-list__link" href="#"> LexVet Поиск </a>
+              </li>
+              <li class="footer-list__item">
+                <a class="footer-list__link" href="#"> LexVet Забота </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- СТОЛБЕЦ 3 - ПАРТНЕРЫ -->
+          <div class="footer-section__fotter-item fotter-item">
+            <p class="fotter-item__title textOrange">ПАРТНЕРЫ</p>
+            <ul class="fotter-item__list footer-list">
+              <li class="footer-list__item">
+                <a class="footer-list__link" href="#"> RoyalConin </a>
+              </li>
+              <li class="footer-list__item">
+                <a class="footer-list__link" href="#"> Кот и Пес </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- СТОЛБЕЦ 4 - БОЛЬШЕ -->
+          <div class="footer-section__fotter-item fotter-item">
+            <p class="fotter-item__title textOrange">БОЛЬШЕ</p>
+            <ul class="fotter-item__list footer-list">
+              <li class="footer-list__item">
+                <a class="footer-list__link" href="#"> Поддержка </a>
+              </li>
+              <li class="footer-list__item">
+                <a class="footer-list__link" href="#"> Pr - отдел </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <section class="ninth-section">
+      <div class="ninth-section__container container">
+        <div class="ninth-section__greyLine"></div>
+        <div class="ninth-section__wrapper">
+          <p class="ninth-section__left-text text-superSmall">
+            Использование этого сервиса, веб-сайта или приложения означает
+            принятие всех условий, перечисленных выше. LexVet и связанные с ним
+            логотипы являются товарными знаками LexVet Animal Supplies,
+            Inc.™ 2024 , LexVet Love | LexVet Animal Supplies, Inc. Все права
+            защищены.
+          </p>
+          <div class="ninth-section__right-text right-text">
+            <p class="right-text__privacyPolicy text-superSmall">
+              Политика конфиденциальности 
+            </p>
+            <div class="right-text__line demarcationLine"></div>
+
+            <p class="right-text__termsOfService text-superSmall">
+              Условия обслуживания
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./src/careMain.js" type="module"></script>
+  </body>
+</html>

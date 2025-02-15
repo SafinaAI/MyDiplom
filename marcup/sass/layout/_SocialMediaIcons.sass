@@ -1,0 +1,26 @@
+
+// ИКОНКИ СОЦИАЛЬНЫХ СЕТЕЙ 
+
+.icons-box
+    margin-top: 2.5rem
+    position: relative
+    margin-bottom: 2.5rem
+    &__item
+        margin-right: 2.5rem
+        @include respond(gorizontal-tab)
+            margin-right: 2rem
+        @include respond(gorizontal-phone)
+            margin-right: 3rem
+        img
+            @include respond(gorizontal-tab)
+                width: 5rem
+            @include respond(gorizontal-phone)
+                width: 7rem
+        &:last-child
+            margin-right: 0
+        &:hover            
+            animation-name: buttonTotop
+            animation-duration: 2.2s
+            animation-delay: 0s
+            animation-timing-function: ease
+            backface-visibility: hidden
