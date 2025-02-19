@@ -24,7 +24,7 @@ const MainMenu = () => {
       </nav>
       <div className="section-header__btns buttons">
         <button className="buttons__LogIn">Регистрация</button>
-        <button className="buttons__LogUp">Поддержать</button>
+        <button className="buttons__LogUp">Мой питомец</button>
       </div>
     </div>
   );

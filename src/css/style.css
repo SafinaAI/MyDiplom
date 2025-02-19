@@ -1821,232 +1821,11 @@ button:hover {
 
 .adopt-cards-container {
   display: grid;
-  grid-template-columns: repeat(
-    3,
-    1fr
-  ); /* Автоматическое деление на 3 колонки */
-  justify-content: center;
-  grid-column-gap: 5rem;
-  grid-row-gap: 5rem;
-}
-
-.adopt-card {
-  width: 37rem;
-  height: 100%; /* Убеждаемся, что карточки растягиваются по высоте */
-  box-shadow: -0.1rem 0.5rem 1.1rem 0.2rem rgba(34, 60, 80, 0.2);
-  border-radius: 5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 2rem 2rem 2rem;
-  text-align: center;
-}
-
-/* .adopt-card:hover {
-  transform: scale(1.1) rotateZ(2deg);
-} */
-
-.adopt-card__img {
-  width: 111%;
-  height: 230px;
-  border-radius: 5rem;
-  margin-bottom: 2rem;
-  object-fit: cover;
-  /* object-fit: contain; */
-  object-position: center;
-}
-
-.adopt-card__img:hover {
-  transform: scale(1.025) rotateZ(1.5deg);
-}
-
-.adopt-card__text-wrapper {
-  flex: 1; /* Заполняет доступное пространство */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between; /* Равномерно распределяет текст */
-  padding: 1rem 2rem;
-  text-align: center;
-}
-
-.adopt-card__title {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.adopt-card__details,
-.adopt-card__illness,
-.adopt-card__danger {
-  margin-bottom: 1rem;
-}
-
-.adopt-card__contact-btn {
-  width: 60%;
-  height: 6rem;
-  margin-top: auto; /* Прижимает кнопку вниз */
-  cursor: pointer;
-}
-
-.aboutPetForAdopt {
-  margin-bottom: 1rem;
-}
-
-.adopt-card__more-btn {
-  margin-top: 2rem;
-  width: 17rem;
-  height: 5rem;
-}
-
-/* .aboutPetForAdopt__wrapper{
-  display: flex;
-  flex-direction: column;
-}
-
-.imgAboutPetForAdopt{
-  width: 40%;
-  height: 40rem;
-  object-fit: cover;
-  /* object-fit: contain; */
-/* object-position: center;
-} */
-
-.aboutPetForAdopt__title {
-  margin-top: 6rem;
-  margin-bottom: 3rem;
-  font-weight: 700;
-  font-size: 5rem;
-}
-.aboutPetForAdopt__content {
-  display: flex;
-  align-items: flex-start;
-  gap: 8rem;
-}
-
-.imgAboutPetForAdopt {
-  width: 300px;
-  height: auto;
-  border-radius: 10px;
-}
-
-.aboutPetForAdopt__info {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.aboutPetForAdopt__desc {
-  margin-top: 4rem;
-  line-height: 3.5rem;
-}
-
-.aboutPetForAdopt__images {
-  display: flex;
-  flex-wrap: wrap; /* Чтобы фото переносились на новую строку при нехватке места */
-  gap: 15px; /* Задает расстояние между изображениями */
-  margin-bottom: 3rem;
-}
-
-.img_aboutpet {
-  width: 200px;
-  height: auto;
-  border-radius: 5px;
-  object-fit: cover;
-}
-
-/* МОДАЛЬНОЕ ОКНО */
-
-/* .modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-content {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 500px;
-  text-align: center;
-  position: relative;
-}
-
-.modal-close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  border: none;
-  background: none;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-.modal-images {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  margin-top: 10px;
-}
-
-.modal-images img {
-  width: 100px;
-  height: auto;
-  border-radius: 5px;
-} */
-
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-
-.modal-content {
-    position: relative;
-    max-width: 30%;
-    /* max-height: 30%; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  }
-
-  .close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
-    color: #f19a56;
-    cursor: pointer;
-  }
-}
-
-/* .adopt-cards-container {
-  display: grid;
   grid-template-columns: 30% 30% 30%;
   justify-content: center;
   grid-column-gap: 5rem;
   grid-row-gap: 5rem;
-  
 }
-
 
 .adopt-card {
   position: relative;
@@ -2065,15 +1844,13 @@ button:hover {
   border-radius: 5rem;
   height: 220px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .adopt-card__title {
   font-size: 1.2em;
 }
-.adopt_card_sick__title {
-  text-align: center;
-}
-.adopt-card__details, .adopt-card__description {
+.adopt-card__details,
+.adopt-card__description {
   padding: 2rem;
 }
 .adopt-card__contact-btn {
@@ -2082,11 +1859,9 @@ button:hover {
   height: 6rem;
   width: 60%;
 }
-.adopt-card__text-wrapper{
-  padding: 0 2rem;
-}
-.adopt-card__illness {
-  
+
+/* .adopt-card-distation {
+  margin-bottom: 5rem;
 } */
 
 .firstSec__container {
@@ -3473,7 +3248,6 @@ button:hover {
 .sixth-section__container {
   position: relative;
   text-align: center;
-  margin-top: 7rem;
 }
 @media (max-width: 480px) {
   .sixth-section__container {
@@ -3913,88 +3687,3 @@ button:hover {
     margin-bottom: 4rem;
   }
 } /*# sourceMappingURL=style.css.map */
-
-.filter-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.filter-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  margin-bottom: 1.5rem;
-}
-
-.filter-wrapper {
-  position: relative;
-}
-
-.filter-button {
-  font-weight: 400;
-  width: 13.6rem;
-  height: 4.4rem;
-  box-shadow: 0px 1px 5px 4px rgba(34, 60, 80, 0.2);
-  color: #f19a56;
-  background-color: #ffffff;
-  border-radius: 5rem;
-  border: 2px solid #f19a56;
-  font-size: 1.8rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.filter-button:hover,
-.filter-button:focus,
-.filter-button.active {
-  background-color: #f19a56;
-  color: #ffffff;
-}
-
-.filter-dropdown {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background-color: #ffffff;
-  box-shadow: 0px 2px 5px 4px rgba(34, 60, 80, 0.2);
-  border-radius: 1rem;
-  padding: 0.5rem 0;
-  list-style: none;
-  margin: 0;
-  z-index: 10;
-}
-
-.filter-dropdown li {
-  padding: 1rem;
-  font-size: 1.6rem;
-  color: #333;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.filter-dropdown li:hover {
-  background-color: #f19a56;
-  color: #ffffff;
-}
-
-.reset-button {
-  font-weight: 400;
-  width: 18rem;
-  height: 6rem;
-  background-color: #f19a56;
-  color: white;
-  border-radius: 5rem;
-  border: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-bottom: 4rem;
-}
-
-.reset-button:hover {
-  background-color: #ff8f39;
-}

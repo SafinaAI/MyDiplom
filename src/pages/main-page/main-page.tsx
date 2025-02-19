@@ -12,6 +12,10 @@ import UserStoriesSection from "../../components/userStoriesSection/userStoriesS
 import SubscribeForm from "../../components/subscribeForm/subscribeForm";
 import Footer from "../../components/footer/footer";
 import RightsSection from "../../components/rightsSection/rightsSection";
+import { achievementData } from "../../const";
+
+
+
 
 // В этом фрагменте мы создаем компонент MainPage, который будет собирать все части страницы (компоненты) в одно целое. Это своего рода контейнер для всех элементов главной страницы. Т.е. мы создаем компонент, который рендерит все необходимые блоки, просто вызывая другие компоненты внутри себя.
 const MainPage = () => (
@@ -22,7 +26,8 @@ const MainPage = () => (
     <JoinCommunitySection />
     <MissionSection />
     <SolutionSection />
-    <AchievementSection />
+    {/* Передаем данные в AchievementSection через пропс */}
+    <AchievementSection achievements={achievementData} />
     <UserStoriesSection />
     <SubscribeForm />
     <Footer />
@@ -32,9 +37,9 @@ const MainPage = () => (
 
 export default MainPage;
 
-type MainPageProps = {
-  rentalOffersCount: number;
-};
+// type MainPageProps = {
+//   rentalOffersCount: number;
+// };
 
 // function MainPage(): JSX.Element {
 //   return (

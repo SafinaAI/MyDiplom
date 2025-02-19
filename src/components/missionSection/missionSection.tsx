@@ -1,5 +1,7 @@
 import React from "react";
 
+
+
 const MissionSection = () => (
   // Третья секция
   <section className="third-section">
