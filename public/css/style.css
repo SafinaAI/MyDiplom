@@ -863,7 +863,8 @@ button:hover {
 }
 .adob-second-section__btn:focus,
 .adob-second-section__btn:hover {
-  font-size: 4rem;
+  font-size: 4.2rem;
+  text-transform: none;
 }
 @media (max-width: 480px) {
   .adob-second-section__btn {
@@ -984,6 +985,12 @@ button:hover {
   .adob-box1-item__pet-city {
     font-size: 3.5rem;
   }
+}
+
+.adob-box1-item__btn{
+  width: 17rem;
+  height: 5rem;
+  margin-bottom: 2rem;
 }
 
 .adob-third-section__container {
@@ -1954,6 +1961,15 @@ button:hover {
   object-fit: cover;
 }
 
+/* YANDEX MAP */
+
+.pet-map__title {
+  margin-bottom: 1rem;
+}
+
+
+
+
 /* МОДАЛЬНОЕ ОКНО */
 
 /* .modal-overlay {
@@ -2012,7 +2028,7 @@ button:hover {
   align-items: center;
   z-index: 1000;
 
-.modal-content {
+  .modal-content {
     position: relative;
     max-width: 30%;
     /* max-height: 30%; */

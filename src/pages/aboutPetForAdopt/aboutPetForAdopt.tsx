@@ -3,6 +3,7 @@ import { useState } from "react";
 import Navigation from "../../components/Navigation/Navigation";
 import Footer from "../../components/footer/footer";
 import RightsSection from "../../components/rightsSection/rightsSection";
+import PetMap from "../../components/petMap/petMap";
 
 const animals = [
   {
@@ -207,6 +208,11 @@ function AboutPetForAdopt() {
                 Куратор: {pet.curator}
               </p>
               <p className="aboutPetForAdopt textBlack">Приют: {pet.hospice}</p>
+            </div>
+            {/* YANDEX MAP */}
+            <div className="pet-map-container">
+              <h3 className="pet-map__title textBlack">Приют на карте:</h3>
+              <PetMap hospice={pet.hospice} />
             </div>
           </div>
           <p className="aboutPetForAdopt aboutPetForAdopt__desc textBlack">

@@ -5,39 +5,52 @@ import UserStoriesSection from "../../components/userStoriesSection/userStoriesS
 import SubscribeForm from "../../components/subscribeForm/subscribeForm";
 import Footer from "../../components/footer/footer";
 import RightsSection from "../../components/rightsSection/rightsSection";
+import { useNavigate } from "react-router-dom";
 
 const animals = [
   {
     id: 1,
     name: "Буся",
+    type: "Собака",
     gender: "Мальчик",
     age: "1 год",
     city: "Казань",
-    imgSrc: "../public/img/adopt_sec_2_photo1.jpg",
+    image: "../public/img/adopt_sec_2_photo1.jpg",
+    curator: "89033064444",
+    hospice: "Подари надежду",
   },
   {
     id: 2,
     name: "Алекс",
+    type: "Собака",
     gender: "Мальчик",
     age: "1 год",
     city: "Казань",
-    imgSrc: "../public/img/adopt_sec_2_photo2.jpg",
+    image: "../public/img/adopt_sec_2_photo2.jpg",
+    curator: "89033064444",
+    hospice: "Танин дом друзей",
   },
   {
     id: 3,
     name: "Маруся",
+    type: "Кошка",
     gender: "Девочка",
-    age: "1 год",
-    city: "Казань",
-    imgSrc: "../public/img/adopt_sec_2_photo3.jpg",
+    age: "11 месяцев",
+    city: "Набережные Челны",
+    image: "../public/img/adopt_sec_2_photo8.jpg",
+    curator: "89033064444",
+    hospice: "Собачья жизнь",
   },
   {
     id: 4,
     name: "Джиджи",
+    type: "Собака",
     gender: "Девочка",
-    age: "1 год",
-    city: "Казань",
-    imgSrc: "../public/img/adopt_sec_2_photo4.jpg",
+    age: "3 года",
+    city: "Альметьевск",
+    image: "../public/img/adopt_sec_2_photo4.jpg",
+    curator: "89033064444",
+    hospice: "Человек собаке друг",
   },
 ];
 
@@ -77,6 +90,11 @@ const animalsNeedingHelp = [
 ];
 
 function AdoptPage(): JSX.Element {
+  const navigate = useNavigate();
+  const handleMoreInfo = (id: number) => {
+    navigate(`/pet/${id}`);
+  };
+
   return (
     <>
       <Navigation />
@@ -160,7 +178,7 @@ function AdoptPage(): JSX.Element {
                 className="adob-second-section__adob-box1-item adob-box1-item"
               >
                 <img
-                  src={animal.imgSrc}
+                  src={animal.image}
                   alt={`фото питомца ${animal.name}`}
                   className="adob-box1-item__img"
                 />
@@ -173,12 +191,20 @@ function AdoptPage(): JSX.Element {
                 <p className="adob-box1-item__pet-city text-superSmall">
                   {animal.city}
                 </p>
+                <button
+                  className="adob-box1-item__btn button"
+                  onClick={() => handleMoreInfo(animal.id)}
+                >
+                  Узнать больше
+                </button>
               </div>
             ))}
           </div>
-
-          <button className="adob-second-section__btn button">
-            Узнать больше
+          <button
+            className="adob-second-section__btn button"
+            onClick={() => navigate("/view-more-pets")}
+          >
+            Больше питомцев
           </button>
           <hr className="adob-second-section__line line" />
         </div>

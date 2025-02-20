@@ -22,6 +22,7 @@ function App(): JSX.Element {
         <Route path={AppRoute.Login} element={<LoginPage />} />
         <Route path={AppRoute.Error404} element={<Error404Page />} />
         <Route path={AppRoute.ViewMorePets} element={<ViewMorePetsPage />} />
+        <Route path="/view-more-pets" element={<ViewMorePetsPage />} />
         <Route
           path={AppRoute.ViewMoreSickPetsPage}
           element={<ViewMoreSickPetsPage />}

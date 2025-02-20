@@ -6,7 +6,7 @@ import UserStoriesSection from "../../components/userStoriesSection/userStoriesS
 import SubscribeForm from "../../components/subscribeForm/subscribeForm";
 import Footer from "../../components/footer/footer";
 import RightsSection from "../../components/rightsSection/rightsSection";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const animals = [
   {
@@ -160,6 +160,7 @@ function ViewMorePetsPage(): JSX.Element {
   const handleMoreInfo = (id: number) => {
     navigate(`/pet/${id}`);
   };
+
 
   return (
     <>
