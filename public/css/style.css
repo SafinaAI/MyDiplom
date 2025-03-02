@@ -709,7 +709,7 @@ button:hover {
   font-size: 1.7rem;
 }
 
-.orangeText{
+.orangeText {
   color: #f19a56;
   font-size: 2.2rem;
 }
@@ -998,7 +998,7 @@ button:hover {
   }
 }
 
-.adob-box1-item__btn{
+.adob-box1-item__btn {
   width: 17rem;
   height: 5rem;
   margin-bottom: 2rem;
@@ -1849,7 +1849,7 @@ button:hover {
 }
 
 .adopt-card {
-  width: 37rem;
+  max-width: 37rem;
   height: 100%; /* Убеждаемся, что карточки растягиваются по высоте */
   box-shadow: -0.1rem 0.5rem 1.1rem 0.2rem rgba(34, 60, 80, 0.2);
   border-radius: 5rem;
@@ -1978,9 +1978,6 @@ button:hover {
   margin-bottom: 1rem;
 }
 
-
-
-
 /* МОДАЛЬНОЕ ОКНО */
 
 /* .modal-overlay {
@@ -2064,6 +2061,78 @@ button:hover {
     cursor: pointer;
   }
 }
+
+/* services/view-more */
+
+.services__main-title {
+  font-size: 5.5rem;
+  font-weight: 700;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  color: #ffb175;
+}
+
+
+.services__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.services__card {
+  max-width: 30rem;
+  /* height: 100%; */
+  box-shadow: -0.1rem 0.5rem 1.1rem 0.2rem rgba(34, 60, 80, 0.2);
+  border-radius: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  background: #fff;
+
+  &:hover {
+    transform: scale(1.05) rotateZ(0.2deg);
+    box-shadow: -0.1rem 0.8rem 1.5rem 0.3rem rgba(34, 60, 80, 0.3);
+  }
+
+  &.active {
+    transform: scale(1.1) rotateZ(2deg);
+    box-shadow: -0.1rem 1rem 2rem 0.5rem rgba(34, 60, 80, 0.4);
+  }
+}
+
+.services__image {
+  width: 100%;
+  height: 200px;
+  border-radius: 2rem;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05) rotateZ(1.5deg);
+  }
+}
+
+.services__name {
+  font-size: 2rem;
+  font-weight: bold;
+  /* margin-bottom: 1rem; */
+}
+
+.services__reviews {
+  font-size: 1.5rem;
+  color: #666;
+}
+
+
+
+/* ------ */
 
 /* .adopt-cards-container {
   display: grid;
@@ -2171,8 +2240,6 @@ button:hover {
   position: relative;
   width: 100%;
 }
-
-
 
 /* ADOPT PAGE */
 .adob-first-section {
@@ -2748,7 +2815,7 @@ button:hover {
   font-weight: 400;
 }
 .nav-menu__list-item-link:hover {
-    color: #f19a56;
+  color: #f19a56;
 }
 .nav-menu__list-item:last-child {
   margin-right: 0rem;
@@ -3681,7 +3748,7 @@ button:hover {
 
 .box4-item {
   position: relative;
-  width: 37rem;
+  max-width: 37rem;
   box-shadow: -0.1rem 0.5rem 1.1rem 0.2rem rgba(34, 60, 80, 0.2);
   border-radius: 5rem;
   margin-bottom: 5rem;
