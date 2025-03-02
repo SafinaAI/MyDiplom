@@ -5,6 +5,9 @@ import UserStoriesSection from "../../components/userStoriesSection/userStoriesS
 import SubscribeForm from "../../components/subscribeForm/subscribeForm";
 import Footer from "../../components/footer/footer";
 import RightsSection from "../../components/rightsSection/rightsSection";
+import { NavLink } from "react-router-dom";
+import { AppRoute } from "../../const";
+import { useNavigate } from "react-router-dom";
 
 const specialists = [
   {
@@ -58,34 +61,42 @@ const specialists = [
 ];
 
 function ServicesPage(): JSX.Element {
+  const navigate = useNavigate();
+
   return (
     <>
       <Navigation />
       {/* Основное меню */}
       <div className="section-header__container container">
-        <a className="section-header__logo-link" href="./index.html">
+        <NavLink className="section-header__logo-link" to="/">
           <img
-            src="../public/icons/LOGO.svg"
+            src="/icons/LOGO.svg"
             alt="Logo"
             className="section-header__logo"
           />
-        </a>
+        </NavLink>
         <nav className="section-header__nav nav-menu">
           <ul className="nav-menu__list">
             <li className="nav-menu__list-item">
-              <a href="">найти специалиста</a>
+              <a className="nav-menu__list-item-link" href="">
+                Найти специалиста
+              </a>
             </li>
             <li className="nav-menu__list-item">
-              <a href="">топ лучших</a>
+              <a className="nav-menu__list-item-link" href="">
+                Топ лучших
+              </a>
             </li>
             <li className="nav-menu__list-item">
-              <a href="">стать специалистом </a>
+              <a className="nav-menu__list-item-link" href="">
+                Стать специалистом{" "}
+              </a>
             </li>
           </ul>
         </nav>
         <div className="section-header__btns buttons">
           <button className="buttons__LogIn">Регистрация</button>
-          <button className="buttons__LogUp">Мой питомец</button>
+          <button className="buttons__LogUp">Услуги</button>
         </div>
       </div>
       {/* СЕКЦИЯ ОДИН - ПРИВЕТСТВИЕ И ФОТО */}
@@ -99,17 +110,26 @@ function ServicesPage(): JSX.Element {
               Мы за то, чтобы животные получали качественные услуги
             </h2>
             <div className="leftWrapper__btn button">
-              <button className="leftWrapper__btn-searchProf">
+              <button
+                className="leftWrapper__btn-searchProf"
+                onClick={() => navigate(AppRoute.ViewMoreServices)}
+              >
                 Найти специалиста
               </button>
+
               <button className="leftWrapper__btn-loadService">
                 Выложить услугу
               </button>
             </div>
           </div>
           <div className="rightWrapper">
-            <img
+            {/* <img
               src="../public/img/carePageDog.png"
+              alt="Фото_собаки"
+              className="rightWrapper__img"
+            /> */}
+            <img
+              src="../public/img/girlAndKorgi.png"
               alt="Фото_собаки"
               className="rightWrapper__img"
             />

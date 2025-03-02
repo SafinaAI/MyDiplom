@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import { useState } from "react";
 import Navigation from "../../components/Navigation/Navigation";
 import Footer from "../../components/footer/footer";
@@ -149,18 +149,18 @@ function AboutPetForAdopt() {
   const pet = animals.find((animal) => animal.id === Number(id));
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
-  interface Pet {
-    name: string;
-    image: string;
-    type: string;
-    gender: string;
-    age: string;
-    city: string;
-    curator: string;
-    hospice: string;
-    description: string;
-    additionalImages: string[];
-  }
+  // interface Pet {
+  //   name: string;
+  //   image: string;
+  //   type: string;
+  //   gender: string;
+  //   age: string;
+  //   city: string;
+  //   curator: string;
+  //   hospice: string;
+  //   description: string;
+  //   additionalImages: string[];
+  // }
 
   if (!pet) {
     return <h2>Питомец не найден</h2>;
@@ -171,17 +171,17 @@ function AboutPetForAdopt() {
       <Navigation />
       {/* Основное меню */}
       <div className="section-header__container container">
-        <a className="section-header__logo-link" href="./index.html">
-          <img
-            src="../public/icons/LOGO.svg"
-            alt="Logo"
-            className="section-header__logo"
-          />
-        </a>
+      <NavLink className="section-header__logo-link" to="/">
+        <img
+          src="/icons/LOGO.svg"
+          alt="Logo"
+          className="section-header__logo"
+        />
+      </NavLink>
         <nav className="section-header__nav nav-menu">
           <ul className="nav-menu__list">
             <li className="nav-menu__list-item">
-              <a href="">куратор</a>
+              <a className="nav-menu__list-item-link" href="">куратор</a>
             </li>
           </ul>
         </nav>

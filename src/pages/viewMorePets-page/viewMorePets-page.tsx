@@ -6,7 +6,7 @@ import UserStoriesSection from "../../components/userStoriesSection/userStoriesS
 import SubscribeForm from "../../components/subscribeForm/subscribeForm";
 import Footer from "../../components/footer/footer";
 import RightsSection from "../../components/rightsSection/rightsSection";
-import { useNavigate, useParams } from "react-router-dom";
+import { NavLink, useNavigate, useParams } from "react-router-dom";
 
 const animals = [
   {
@@ -165,25 +165,26 @@ function ViewMorePetsPage(): JSX.Element {
   return (
     <>
       <Navigation />
+      
       {/* Основное меню */}
-      <div className="section-header__container container">
-        <a className="section-header__logo-link" href="./index.html">
-          <img
-            src="../public/icons/LOGO.svg"
-            alt="Logo"
-            className="section-header__logo"
-          />
-        </a>
+      {/* <div className="section-header__container container">
+      <NavLink className="section-header__logo-link" to="/">
+        <img
+          src="/icons/LOGO.svg"
+          alt="Logo"
+          className="section-header__logo"
+        />
+      </NavLink>
         <nav className="section-header__nav nav-menu">
           <ul className="nav-menu__list">
             <li className="nav-menu__list-item">
-              <a href="">найти специалиста</a>
+              <a className="nav-menu__list-item-link" href="">найти специалиста</a>
             </li>
             <li className="nav-menu__list-item">
-              <a href="">топ лучших</a>
+              <a className="nav-menu__list-item-link" href="">топ лучших</a>
             </li>
             <li className="nav-menu__list-item">
-              <a href="">стать специалистом </a>
+              <a className="nav-menu__list-item-link" href="">стать специалистом </a>
             </li>
           </ul>
         </nav>
@@ -191,7 +192,7 @@ function ViewMorePetsPage(): JSX.Element {
           <button className="buttons__LogIn">Регистрация</button>
           <button className="buttons__LogUp">Мой питомец</button>
         </div>
-      </div>
+      </div> */}
       <section className="secnd-section-section adoptFriend-margin">
         <div className="adob-second-section__container container">
           <p className="adob-second-section__text-small text-small">

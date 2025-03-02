@@ -5,7 +5,7 @@ import UserStoriesSection from "../../components/userStoriesSection/userStoriesS
 import SubscribeForm from "../../components/subscribeForm/subscribeForm";
 import Footer from "../../components/footer/footer";
 import RightsSection from "../../components/rightsSection/rightsSection";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const animals = [
   {
@@ -62,6 +62,7 @@ const animalsNeedingHelp = [
     age: "1 год",
     city: "Казань",
     imgSrc: "../public/img/adob_third_section_cart1.jfif",
+    urgency: "Высокая",
   },
   {
     id: 2,
@@ -70,6 +71,7 @@ const animalsNeedingHelp = [
     age: "1 год",
     city: "Казань",
     imgSrc: "../public/img/adob_third_section_cart2.jfif",
+    urgency: "Низкая",
   },
   {
     id: 3,
@@ -78,6 +80,7 @@ const animalsNeedingHelp = [
     age: "1 год",
     city: "Казань",
     imgSrc: "../public/img/adob_third_section_cart3.jfif",
+    urgency: "Средняя",
   },
   {
     id: 4,
@@ -86,6 +89,7 @@ const animalsNeedingHelp = [
     age: "1 год",
     city: "Казань",
     imgSrc: "../public/img/adob_third_section_cart4.jfif",
+    urgency: "Средняя",
   },
 ];
 
@@ -100,43 +104,49 @@ function AdoptPage(): JSX.Element {
       <Navigation />
       {/* Основное меню */}
       <div className="section-header__container container">
-        <a className="section-header__logo-link" href="./index.html">
+        <NavLink className="section-header__logo-link" to="/">
           <img
-            src="../public/icons/LOGO.svg"
+            src="/icons/LOGO.svg"
             alt="Logo"
             className="section-header__logo"
           />
-        </a>
+        </NavLink>
         <nav className="section-header__nav nav-menu">
           <ul className="nav-menu__list">
             <li className="nav-menu__list-item">
               {" "}
-              <a href="">усыновить</a>{" "}
+              <a className="nav-menu__list-item-link" href="">
+                Усыновить
+              </a>{" "}
             </li>
             <li className="nav-menu__list-item">
               {" "}
-              <a href="">стать донором</a>{" "}
+              <a className="nav-menu__list-item-link" href="">
+                Стать донором
+              </a>{" "}
             </li>
             <li className="nav-menu__list-item">
               {" "}
-              <a href="">о пожертвованиях</a>{" "}
+              <a className="nav-menu__list-item-link" href="">
+                Любовные истории
+              </a>{" "}
             </li>
           </ul>
         </nav>
         <div className="section-header__btns buttons">
           <button className="buttons__LogIn">Регистрация</button>
-          <button className="buttons__LogUp">Мой питомец</button>
+          <button className="buttons__LogUp">Усыновить</button>
         </div>
       </div>
       {/* СЕКЦИЯ 1 */}
-      <section className="adob-first-section">
-        <div className="adob-first-section__container container">
-          {/* <img
+      {/* <section className="adob-first-section">
+        <div className="adob-first-section__container container"> */}
+      {/* <img
       src="./src/img/try3.png"
       alt="фото фона"
       className="first-section__background-img"
     /> */}
-          <div className="adob-first-section__background-img">
+      {/* <div className="adob-first-section__background-img">
             <div className="adob-first-section__text-wrapper">
               <h2 className="adob-first-section__title text-big">
                 Твой друг ждет тебя тут!
@@ -155,7 +165,36 @@ function AdoptPage(): JSX.Element {
             </div>
           </div>
         </div>
+      </section> */}
+
+      <section className="adob-first-section">
+        <div className="adob-first-section__container container">
+          <div className="adob-first-section__leftWrapper">
+            <h1 className="adob-first-section__leftWrapper__title">
+              Твой друг ждет тебя тут!
+            </h1>
+            <p className="adob-first-section__leftWrapper__text">
+              Уже более 500 животных нашли себе новых хозяев
+            </p>
+            <div className="adob-first-section__leftWrapper__btn button">
+              <button className="adob-first-section__leftWrapper__btn-ourAnimals">
+                Наши животные
+              </button>
+              <button className="adob-first-section__leftWrapper__btn-donat">
+                Пожертвовать
+              </button>
+            </div>
+          </div>
+          <div className="adob-first-section__rightWrapper">
+            <img
+              src="../public/img/girlWithCat.png"
+              alt="Фото_собаки"
+              className="adob-first-section__rightWrapper__img"
+            />
+          </div>
+        </div>
       </section>
+
       {/* СЕКЦИЯ 2 - ЖИВОТНЫЕ ГОТОВЫЕ К УСЫНОВЛЕНИЮ */}
       <section className="adob-second-section">
         <div className="adob-second-section__container container">
@@ -171,6 +210,9 @@ function AdoptPage(): JSX.Element {
           </p>
 
           {/* карточки с животными, готовые к усыновлению */}
+          {/* animals — это массив объектов, содержащий данные о питомцах.
+.map((animal) => (...)) — метод .map() проходит по каждому элементу массива animals 
+и создает для каждого питомца (animal) JSX-структуру (карточку). */}
           <div className="adob-second-section__adob-cards-box1">
             {animals.map((animal) => (
               <div
@@ -242,15 +284,24 @@ function AdoptPage(): JSX.Element {
                 <p className="adob-box2-item__pet-city text-superSmall">
                   {animal.city}
                 </p>
-                <button className="adob-box2-item__pet-btn button">
+                <p className="adob-box2-item__pet-city text-superSmall">
+                  <strong>Срочность:</strong> {animal.urgency}
+                </p>
+                <button
+                  className="adob-box2-item__pet-btn button"
+                  onClick={() => navigate(`/sick-pet/${animal.id}`)}
+                >
                   Пожертвовать
                 </button>
               </div>
             ))}
           </div>
 
-          <button className="adob-third-section__btn button">
-            Узнать больше
+          <button
+            className="adob-second-section__btn button"
+            onClick={() => navigate("/sick-pets")}
+          >
+            Больше питомцев
           </button>
           <hr className="adob-third-section__line line" />
         </div>

@@ -445,14 +445,14 @@ table {
 }
 
 /* khula-regular - latin */
-@font-face {
+/* @font-face {
   font-display: swapKhula;
   font-family: "Khula!";
   font-style: normal;
   font-weight: 400;
   src: local(Khula);
   src: url("../fonts/khula-v12-latin-regular.woff2") format("woff2");
-}
+} */
 /* khula-700 - latin */
 @font-face {
   font-display: swap;
@@ -572,7 +572,7 @@ html {
 }
 
 body {
-  font-family: "Khula!", sans-serif;
+  font-family: "Carlito!", sans-serif;
   font-weight: 400;
   letter-spacing: 0.2rem;
   font-size: 1.5rem;
@@ -703,6 +703,17 @@ button:hover {
   color: #f19a56;
 }
 
+.hard-orange-word {
+  color: #f19a56;
+  font-weight: 700;
+  font-size: 1.7rem;
+}
+
+.orangeText{
+  color: #f19a56;
+  font-size: 2.2rem;
+}
+
 .line {
   max-width: 28.4rem;
   color: #2e2e2e;
@@ -743,7 +754,7 @@ button:hover {
   transform: scale(1.1) rotateZ(3deg);
 }
 
-.adob-first-section {
+/* .adob-first-section {
   margin-bottom: 6rem;
 }
 .adob-first-section__container {
@@ -821,7 +832,7 @@ button:hover {
     font-size: 4rem;
     padding: 2rem 2rem;
   }
-}
+} */
 
 .adob-second-section__container {
   text-align: center;
@@ -2115,13 +2126,14 @@ button:hover {
 
 .leftWrapper {
   position: relative;
+  width: 150%;
 }
 .leftWrapper__title {
   font-size: 4.2rem;
   font-weight: 700;
   margin-top: 6rem;
-  margin-bottom: 5.5rem;
-  line-height: 5.7rem;
+  margin-bottom: 3rem;
+  line-height: 5rem;
   text-align: center;
   color: #f19a56;
 }
@@ -2129,7 +2141,7 @@ button:hover {
   font-size: 3.2rem;
   font-weight: 400;
   margin-bottom: 5.5rem;
-  line-height: 4.7rem;
+  line-height: 4.5rem;
   text-align: center;
 }
 .leftWrapper__btn {
@@ -2151,10 +2163,75 @@ button:hover {
 .rightWrapper {
   position: relative;
 }
-.rightWrapper__img {
+/* .rightWrapper__img {
   position: relative;
   width: 65%;
+} */
+.rightWrapper__img {
+  position: relative;
+  width: 100%;
 }
+
+
+
+/* ADOPT PAGE */
+.adob-first-section {
+  margin-bottom: 5rem;
+}
+.adob-first-section__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+}
+
+.adob-first-section__leftWrapper {
+  position: relative;
+  width: 150%;
+}
+.adob-first-section__leftWrapper__title {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+  line-height: 5rem;
+  text-align: center;
+  color: #f19a56;
+}
+.adob-first-section__leftWrapper__text {
+  font-size: 3.2rem;
+  font-weight: 400;
+  margin-bottom: 4rem;
+  line-height: 4.7rem;
+  text-align: center;
+}
+.adob-first-section__leftWrapper__btn {
+  margin-bottom: 3rem;
+}
+.adob-first-section__leftWrapper__btn-ourAnimals {
+  width: 20rem;
+  height: 6rem;
+  margin-right: 3rem;
+  color: #ffffff;
+  padding: 0.5rem;
+}
+.adob-first-section__leftWrapper__btn-donat {
+  width: 20rem;
+  height: 6rem;
+  color: #ffffff;
+}
+
+.adob-first-section__rightWrapper {
+  position: relative;
+}
+.adob-first-section__rightWrapper__img {
+  position: relative;
+  width: 60%;
+  overflow: hidden;
+}
+
+/*  */
 
 .searchSection {
   margin-bottom: 5rem;
@@ -2666,9 +2743,12 @@ button:hover {
 }
 .nav-menu__list-item {
   margin-right: 6rem;
-  font-size: 1.9rem;
+  font-size: 1.7rem;
   text-align: center;
   font-weight: 400;
+}
+.nav-menu__list-item-link:hover {
+    color: #f19a56;
 }
 .nav-menu__list-item:last-child {
   margin-right: 0rem;
@@ -3576,6 +3656,27 @@ button:hover {
     padding: 3rem;
     font-size: 3.6rem;
   }
+}
+
+/* СТРАНИЦА С ОДНОЙ ИСТРИЕЙ ПОЛЬЗОВАТЕЛЯ */
+.aboutOneStory__title {
+  margin-top: 7rem;
+  margin-bottom: 2rem;
+  font-size: 5rem;
+  margin-left: 7rem;
+}
+
+.aboutOneStory__img {
+  margin-left: 30rem;
+  width: 50%;
+  margin-bottom: 5rem;
+  margin-top: 5rem;
+}
+
+.aboutOneStory__text {
+  margin-bottom: 5rem;
+  font-size: 2.2rem;
+  line-height: 4rem;
 }
 
 .box4-item {

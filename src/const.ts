@@ -1,4 +1,4 @@
-const AppRoute = {
+export const AppRoute = {
   Main: "/",
   Login: "/login",
   Adopt: "/adopt",
@@ -7,9 +7,11 @@ const AppRoute = {
   Error404: "/error404",
   ViewMorePets: "/viewMorePetsPage",
   ViewMoreSickPetsPage: "/viewMoreSickPetsPage",
-  AboutPet: "/pet/:id", 
+  AboutSickPet: "/aboutSickPet",
+  AboutPet: "/pet/:id",
+  ViewMoreServices: "/services/view-more",
 } as const;
-export { AppRoute };
+
 
 // const AuthorizationStatus = {
 //   Auth: "AUTH",
