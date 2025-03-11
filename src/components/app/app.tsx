@@ -13,6 +13,7 @@ import AboutSickPet from "../../pages/aboutSickPet/aboutSickPet";
 import UserStoriesSection from "../userStoriesSection/userStoriesSection";
 import AboutOneStory from "../../pages/aboutOneStory/aboutOneStory";
 import ViewMoreServices from "../../pages/viewMoreServices/viewMoreServices";
+import AboutOneSpecialist from "../../pages/aboutOneSpecialist/aboutOneSpecialist";
 import { AppRoute } from "../../const";
 
 function App(): JSX.Element {
@@ -36,8 +37,15 @@ function App(): JSX.Element {
         <Route path={AppRoute.AboutPet} element={<AboutPetForAdopt />} />
         <Route path="/" element={<UserStoriesSection />} />
         <Route path="/story/:id" element={<AboutOneStory />} />
-        <Route path={AppRoute.ViewMoreServices} element={<ViewMoreServices />} />
-        </Routes>
+        <Route
+          path={AppRoute.ViewMoreServices}
+          element={<ViewMoreServices />}
+        />
+        <Route
+          path="/services/specialist/:id"
+          element={<AboutOneSpecialist />}
+        />
+      </Routes>
     </BrowserRouter>
   );
 }
