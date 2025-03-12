@@ -2132,6 +2132,12 @@ button:hover {
 
 /* ABOUT ONE SPECIALIST */
 
+.specialist-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .specialist__name {
   font-size: 4rem;
   font-weight: 700;
@@ -2139,6 +2145,23 @@ button:hover {
   margin-top: 4rem;
   margin-bottom: 2rem;
 }
+
+.specialist__price {
+  color: orange;
+  font-weight: bold;
+  font-size: 4rem;
+  font-weight: 700;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+/* .specialist__name {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #4c4c4c;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+} */
 
 .specialist__profession {
   margin-top: 2rem;
@@ -2382,7 +2405,6 @@ button:hover {
   cursor: pointer;
   transition: background-color 0.3s;
   margin-bottom: 4rem;
-
 }
 
 .submit-review:hover {
@@ -2395,7 +2417,6 @@ button:hover {
   font-size: 1.8rem;
 }
 
-
 /* -- */
 
 /* Отзывы */
@@ -2405,7 +2426,7 @@ button:hover {
   margin-top: 20px;
 }
 
-.reviews-section__title{
+.reviews-section__title {
   font-size: 2.5rem;
   margin-bottom: 2rem;
 }
@@ -2413,7 +2434,7 @@ button:hover {
 .review-card {
   display: flex;
   align-items: flex-start;
-  background-color: #FFF6F3;
+  background-color: #fff6f3;
   padding: 2rem 3rem;
   border-radius: 2rem;
   margin-bottom: 2rem;
@@ -2438,7 +2459,7 @@ button:hover {
 
 .review-stars {
   margin: 5px 0;
-  color: gold
+  color: gold;
 }
 
 .reviews-section__text {
@@ -2453,7 +2474,6 @@ button:hover {
   margin-right: 1rem;
   cursor: pointer;
   transition: transform 0.2s;
-  
 }
 
 .review-thumbnail:hover {

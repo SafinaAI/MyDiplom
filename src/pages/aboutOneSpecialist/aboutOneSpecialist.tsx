@@ -1,10 +1,12 @@
 import { useParams } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Navigation from "../../components/Navigation/Navigation";
 import SpecialistMap from "../../components/specialistMap/specialistMap";
 import RatingBlock from "../../components/ratingBlock/ratingBlock";
 import Footer from "../../components/footer/footer";
 import RightsSection from "../../components/rightsSection/rightsSection";
+
+const DEFAULT_AVATAR = "/img/Defolt-Avatar.jpg"; // Дефолтный аватар
 
 const specialists = [
   {
@@ -13,6 +15,7 @@ const specialists = [
     profession: "грумер",
     image: "/img/груммер1 1.png",
     reviews: 150,
+    price: 1000,
     description:
       "Меня зовут Таня, и я профессиональный грумер с 5-летним опытом. Работаю с собаками и кошками разных пород и характеров. Моя цель – сделать процесс груминга комфортным для вашего любимца, а результат – безупречным!",
     additionalImages: [
@@ -37,9 +40,20 @@ const specialists = [
     profession: "грумер",
     image: "/img/груммер2.png",
     reviews: 120,
+    price: 1500,
     description:
       "Профессиональный грумер. Использует только безопасные средства.",
     additionalImages: ["/img/груммер2_2.png", "/img/груммер2_3.png"],
+    services: [
+      "✅ Стрижка и тримминг (модельные и гигиенические)",
+      "✅ Купание с подбором профессиональной косметики",
+      "✅ Вычёсывание колтунов и подшерстка",
+      "✅ Чистка ушей и глаз, подстригание когтей",
+      "✅ SPA-процедуры для шерсти",
+    ],
+    phone: "+7 (999) 123-45-67",
+    address: "Казань, ул. Баумана, 15",
+    location: { lat: 55.7887, lon: 49.1221 }, // Координаты специалиста
   },
   {
     id: 3,
@@ -47,24 +61,58 @@ const specialists = [
     profession: "грумер",
     image: "/img/груммер3.png",
     reviews: 100,
+    price: 2000,
     description: "Обожает животных, поможет вашему питомцу выглядеть идеально!",
     additionalImages: ["/img/груммер3_2.png"],
+    services: [
+      "✅ Стрижка и тримминг (модельные и гигиенические)",
+      "✅ Купание с подбором профессиональной косметики",
+      "✅ Вычёсывание колтунов и подшерстка",
+      "✅ Чистка ушей и глаз, подстригание когтей",
+      "✅ SPA-процедуры для шерсти",
+    ],
+    phone: "+7 (999) 123-45-67",
+    address: "Казань, ул. Баумана, 15",
+    location: { lat: 55.7887, lon: 49.1221 }, // Координаты специалиста
+  },
+  {
+    id: 4,
+    name: "Хирург Иван",
+    profession: "Ветеринарный врач-хирург, офтальмолог, ратолог",
+    image: "/img/ветврач1.png",
+    reviews: 90,
+    price: 1000,
+    description:
+      "С детства любил и нянчился с животными, но вот только по близости не было ветеринарных учебных учреждений я поступил в медицинский университет.⠀Став врачом и проработав несколько лет в одной из больниц, мечта из детства — спасать животных, все же пересилила и привела меня в Казань, где я выучилася на ветеринарного врача.⠀Моя специализация — офтальмология, ратология, хирургия. Настоящий ветеринар должен любить животных, и я не исключение.⠀Дома у меня живут пудель, золотистый ретривер и четыре кошки.",
+    additionalImages: [
+      "/img/ветврач1.png",
+      "/img/adopt_sec_2_photo7.jpg",
+      "/img/adopt_sec_2_photo6.jpg",
+    ],
+    services: [
+      "✅ Кастрирование/стерилизация",
+      "✅ Операции на позвоночник",
+      "✅ Хирургические манипуляции любой сложности",
+    ],
+    phone: "+7 (999) 123-45-67",
+    address: "Казань, ул. Баумана, 15",
+    location: { lat: 55.7887, lon: 49.1221 }, // Координаты специалиста
   },
 ];
 
-const sampleReviews = [
+const initialReviews = [
   {
     id: 1,
-    avatar: "/img/груммер2.png",
+    avatar: "/img/avatar_4-mark-gen.jpg",
     name: "Алексей",
     date: "15 февраля 2025",
     rating: 5,
-    text: "Таня – настоящий профессионал! Мой шпиц всегда выходит от неё пушистым и ухоженным, а главное – спокойным. Раньше он боялся груминга, но с Таней всё проходит без стресса. Спасибо за заботу и терпение!",
+    text: "Отличный специалист! Мой пес теперь выглядит великолепно!",
     images: ["/img/груммер3.png", "/img/груммер3.png"],
   },
   {
     id: 2,
-    avatar: "/img/груммер2.png",
+    avatar: "/img/avatar_1-angelina_joly.jpg",
     name: "Марина",
     date: "10 февраля 2025",
     rating: 4,
@@ -73,24 +121,70 @@ const sampleReviews = [
   },
 ];
 
+// const sampleReviews = [
+//   {
+//     id: 1,
+//     avatar: "/img/груммер2.png",
+//     name: "Алексей",
+//     date: "15 февраля 2025",
+//     rating: 5,
+//     text: "Таня – настоящий профессионал! Мой шпиц всегда выходит от неё пушистым и ухоженным, а главное – спокойным. Раньше он боялся груминга, но с Таней всё проходит без стресса. Спасибо за заботу и терпение!",
+//     images: ["/img/груммер3.png", "/img/груммер3.png"],
+//   },
+//   {
+//     id: 2,
+//     avatar: "/img/груммер2.png",
+//     name: "Марина",
+//     date: "10 февраля 2025",
+//     rating: 4,
+//     text: "Очень хороший сервис, но записаться было сложно.",
+//     images: ["/img/груммер3.png"],
+//   },
+// ];
+
+// Загружаем отзывы из localStorage при запуске приложения
+const loadReviewsFromLocalStorage = () => {
+  const storedReviews = localStorage.getItem("reviews");
+  return storedReviews ? JSON.parse(storedReviews) : [];
+};
+
+// Сохраняем отзывы в localStorage при их обновлении
+const saveReviewsToLocalStorage = (reviews) => {
+  localStorage.setItem("reviews", JSON.stringify(reviews));
+};
+
 function AboutOneSpecialist() {
   const { id } = useParams();
   const specialist = specialists.find((s) => s.id === Number(id));
 
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-
   const [showPhone, setShowPhone] = useState(false);
-
   const [rating, setRating] = useState(0);
   const [reviewText, setReviewText] = useState("");
   const [isAuthorized, setIsAuthorized] = useState(true); // Заглушка для проверки авторизации
+  //const [reviews, setReviews] = useState(initialReviews);
+  // Загружаем отзывы при загрузке компонента
+  const [reviews, setReviews] = useState(loadReviewsFromLocalStorage());
+  const [reviewImages, setReviewImages] = useState<File[]>([]);
 
   if (!specialist) {
     return <p>Специалист не найден</p>;
   }
 
+  //   Сохраняем отзывы в localStorage при каждом изменении
+  useEffect(() => {
+    saveReviewsToLocalStorage(reviews);
+  }, [reviews]);
+
   const handleStarClick = (index: number) => {
     setRating(index + 1);
+  };
+
+  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files) {
+      const filesArray = Array.from(e.target.files);
+      setReviewImages(filesArray);
+    }
   };
 
   const handleSubmitReview = () => {
@@ -103,16 +197,39 @@ function AboutOneSpecialist() {
       return;
     }
 
-    console.log("Отзыв отправлен:", { rating, reviewText });
+    const newReview = {
+      id: reviews.length + 1,
+      avatar: DEFAULT_AVATAR,
+      name: "Новый пользователь",
+      date: new Date().toLocaleDateString(),
+      rating: rating,
+      text: reviewText,
+      images: reviewImages.map((file) => URL.createObjectURL(file)),
+    };
+
+    setReviews([newReview, ...reviews]);
     setRating(0);
     setReviewText("");
+    setReviewImages([]);
   };
+
+  // Функция для удаления отзыва - расскомментруй - когда приголится
+  //   const handleDeleteReview = (reviewId) => {
+  //     const updatedReviews = reviews.filter((review) => review.id !== reviewId);
+  //     setReviews(updatedReviews);
+  //   };
 
   return (
     <>
       <Navigation />
       <div className="container">
-        <h1 className="specialist__name">{specialist.name}</h1>
+        {/* Имя специалиста и цена */}
+        <div className="specialist-header">
+          <h1 className="specialist__name">{specialist.name}</h1>
+          <span className="specialist__price">
+            От {specialist.price} за услугу
+          </span>
+        </div>
         <p className="specialist__profession text-black">
           Профессия: {specialist.profession}
         </p>
@@ -186,6 +303,7 @@ function AboutOneSpecialist() {
       </div>
       <RatingBlock reviews={[5, 4, 5, 5, 3, 4, 5, 2, 5, 4, 3, 5, 1]} />
 
+      {/* Оставить отзыв */}
       <div className="review-container">
         <h3 className="review-container__title">Оставить отзыв</h3>
         <div className="rating-selection">
@@ -206,23 +324,44 @@ function AboutOneSpecialist() {
           value={reviewText}
           onChange={(e) => setReviewText(e.target.value)}
         />
+        <input type="file" multiple onChange={handleImageUpload} />
         <button className="submit-review" onClick={handleSubmitReview}>
           Оставить отзыв
         </button>
       </div>
 
+      {/* Секция отзывов */}
+
       <div className="reviews-section container">
         <h3 className="reviews-section__title">Отзывы</h3>
-        {sampleReviews.map((review) => (
+        {reviews.map((review) => (
           <div key={review.id} className="review-card">
-            <img src={review.avatar} alt="Аватар" className="review-avatar" />
+            {/* Если у отзыва нет аватара, используем дефолтный */}
+            <img
+              src={review.avatar || DEFAULT_AVATAR}
+              alt="Аватар"
+              className="review-avatar"
+            />
             <div className="review-content">
-              <h4>{review.name}</h4>
-              <p className="review-date">{review.date}</p>
-              <div className="review-stars">
-                {[...Array(review.rating)].map((_, i) => "★")}
+              <div className="review-header">
+                <h4>{review.name}</h4>
+                <p className="review-date">{review.date}</p>
               </div>
-              <p className="reviews-section__text">{review.text}</p>
+              <div className="review-stars">
+                {[...Array(5)].map((_, i) => (
+                  <span
+                    key={i}
+                    className={i < review.rating ? "star-filled" : "star-empty"}
+                  >
+                    ★
+                  </span>
+                ))}
+              </div>
+              <p>{review.text}</p>
+              {/* Можешь на создавать отзывов - потом раскомментируй блок и сможешь удалить ненужные */}
+              {/* <button onClick={() => handleDeleteReview(review.id)} className="delete-review">
+                  Удалить
+                </button> */}
               <div className="review-images">
                 {review.images.map((img, idx) => (
                   <img
@@ -238,7 +377,6 @@ function AboutOneSpecialist() {
           </div>
         ))}
       </div>
-
       <Footer />
       <RightsSection />
     </>
