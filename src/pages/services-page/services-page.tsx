@@ -165,7 +165,11 @@ function ServicesPage(): JSX.Element {
             </h2>
             <div className="bestSpec__cards">
               {specialists.map((spec) => (
-                <div key={spec.id} className="bestSpec__card">
+                <NavLink
+                  key={spec.id}
+                  to={`${AppRoute.AboutSpecialist}/${spec.id}`}
+                  className="bestSpec__card"
+                >
                   <img
                     loading="lazy"
                     src={spec.image}
@@ -179,7 +183,7 @@ function ServicesPage(): JSX.Element {
                   <p className="bestSpec__cardReviews">
                     {spec.reviews} отзывов
                   </p>
-                </div>
+                </NavLink>
               ))}
             </div>
           </div>

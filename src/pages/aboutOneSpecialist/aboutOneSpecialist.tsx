@@ -1,14 +1,45 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Navigation from "../../components/Navigation/Navigation";
 import SpecialistMap from "../../components/specialistMap/specialistMap";
 import RatingBlock from "../../components/ratingBlock/ratingBlock";
 import Footer from "../../components/footer/footer";
 import RightsSection from "../../components/rightsSection/rightsSection";
 
+// Определяем интерфейсы для типов данных
+interface Review {
+  id: number;
+  avatar: string;
+  name: string;
+  date: string;
+  rating: number;
+  text: string;
+  images: string[];
+}
+
+interface Specialist {
+  id: number;
+  name: string;
+  profession: string;
+  image: string;
+  reviews: number;
+  price: number;
+  description: string;
+  additionalImages: string[];
+  services: string[];
+  phone: string;
+  address: string;
+  location: {
+    lat: number;
+    lon: number;
+  };
+}
+
 const DEFAULT_AVATAR = "/img/Defolt-Avatar.jpg"; // Дефолтный аватар
 
-const specialists = [
+// Типизированный массив специалистов
+const specialists: Specialist[] = [
   {
     id: 1,
     name: "Груммер Таня",
@@ -121,57 +152,38 @@ const initialReviews = [
   },
 ];
 
-// const sampleReviews = [
-//   {
-//     id: 1,
-//     avatar: "/img/груммер2.png",
-//     name: "Алексей",
-//     date: "15 февраля 2025",
-//     rating: 5,
-//     text: "Таня – настоящий профессионал! Мой шпиц всегда выходит от неё пушистым и ухоженным, а главное – спокойным. Раньше он боялся груминга, но с Таней всё проходит без стресса. Спасибо за заботу и терпение!",
-//     images: ["/img/груммер3.png", "/img/груммер3.png"],
-//   },
-//   {
-//     id: 2,
-//     avatar: "/img/груммер2.png",
-//     name: "Марина",
-//     date: "10 февраля 2025",
-//     rating: 4,
-//     text: "Очень хороший сервис, но записаться было сложно.",
-//     images: ["/img/груммер3.png"],
-//   },
-// ];
-
-// Загружаем отзывы из localStorage при запуске приложения
-const loadReviewsFromLocalStorage = () => {
+// Типизированные функции для работы с localStorage
+const loadReviewsFromLocalStorage = (): Review[] => {
   const storedReviews = localStorage.getItem("reviews");
   return storedReviews ? JSON.parse(storedReviews) : [];
 };
 
-// Сохраняем отзывы в localStorage при их обновлении
-const saveReviewsToLocalStorage = (reviews) => {
+const saveReviewsToLocalStorage = (reviews: Review[]): void => {
   localStorage.setItem("reviews", JSON.stringify(reviews));
 };
 
 function AboutOneSpecialist() {
-  const { id } = useParams();
+  const { id } = useParams<{ id: string }>();
+  const navigate = useNavigate();
   const specialist = specialists.find((s) => s.id === Number(id));
 
+  // Типизированные состояния
+  const [reviews, setReviews] = useState<Review[]>(
+    loadReviewsFromLocalStorage()
+  );
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [showPhone, setShowPhone] = useState(false);
   const [rating, setRating] = useState(0);
   const [reviewText, setReviewText] = useState("");
-  const [isAuthorized, setIsAuthorized] = useState(true); // Заглушка для проверки авторизации
-  //const [reviews, setReviews] = useState(initialReviews);
-  // Загружаем отзывы при загрузке компонента
-  const [reviews, setReviews] = useState(loadReviewsFromLocalStorage());
+  const [isAuthorized, setIsAuthorized] = useState(true);
   const [reviewImages, setReviewImages] = useState<File[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
-  if (!specialist) {
-    return <p>Специалист не найден</p>;
-  }
+  useEffect(() => {
+    const timer = setTimeout(() => setIsLoading(false), 500);
+    return () => clearTimeout(timer);
+  }, [id]);
 
-  //   Сохраняем отзывы в localStorage при каждом изменении
   useEffect(() => {
     saveReviewsToLocalStorage(reviews);
   }, [reviews]);
@@ -182,8 +194,7 @@ function AboutOneSpecialist() {
 
   const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
-      const filesArray = Array.from(e.target.files);
-      setReviewImages(filesArray);
+      setReviewImages(Array.from(e.target.files));
     }
   };
 
@@ -197,12 +208,12 @@ function AboutOneSpecialist() {
       return;
     }
 
-    const newReview = {
+    const newReview: Review = {
       id: reviews.length + 1,
       avatar: DEFAULT_AVATAR,
       name: "Новый пользователь",
       date: new Date().toLocaleDateString(),
-      rating: rating,
+      rating,
       text: reviewText,
       images: reviewImages.map((file) => URL.createObjectURL(file)),
     };
@@ -212,6 +223,24 @@ function AboutOneSpecialist() {
     setReviewText("");
     setReviewImages([]);
   };
+
+  if (isLoading) return <div className="loader">Загрузка...</div>;
+
+  if (!specialist) {
+    return (
+      <div className="not-found-container">
+        <Navigation />
+        <div className="container">
+          <h2>Специалист не найден</h2>
+          <button onClick={() => navigate(-1)} className="back-button">
+            ← Назад
+          </button>
+        </div>
+        <Footer />
+        <RightsSection />
+      </div>
+    );
+  }
 
   // Функция для удаления отзыва - расскомментруй - когда приголится
   //   const handleDeleteReview = (reviewId) => {
@@ -223,6 +252,14 @@ function AboutOneSpecialist() {
     <>
       <Navigation />
       <div className="container">
+        {/* Добавляем кнопку "Назад" */}
+      <button 
+        onClick={() => navigate(-1)}
+        className="back-button"
+        style={{ marginBottom: '20px' }}
+      >
+        ← Назад к списку
+      </button>
         {/* Имя специалиста и цена */}
         <div className="specialist-header">
           <h1 className="specialist__name">{specialist.name}</h1>

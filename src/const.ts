@@ -1,15 +1,18 @@
 export const AppRoute = {
-  Main: "/",
-  Login: "/login",
-  Adopt: "/adopt",
-  Services: "/services",
-  Stories: "/stories",
-  Error404: "/error404",
-  ViewMorePets: "/viewMorePetsPage",
-  ViewMoreSickPetsPage: "/viewMoreSickPetsPage",
-  AboutSickPet: "/aboutSickPet",
-  AboutPet: "/pet/:id",
-  ViewMoreServices: "/services/view-more",
+  Main: '/',
+  Adopt: '/adopt',
+  Services: '/services',
+  Stories: '/stories',
+  Login: '/login',
+  ViewMorePets: '/view-more-pets',
+  ViewMoreSickPets: '/sick-pets',
+  AboutPet: '/about-pet',
+  AboutSickPet: '/sick-pet',
+  AboutOneStory: '/story',
+  ViewMoreServices: '/view-more-services',
+  AboutSpecialist: '/services/specialist', // Добавьте эту константу
+  PetCard: '/pet-card',
+  Error404: '/404'
 } as const;
 
 

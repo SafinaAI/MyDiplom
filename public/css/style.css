@@ -2559,6 +2559,57 @@ button:hover {
   color: red;
 }
 
+/* Стили для страницы "Не найдено" */
+.not-found-container {
+  text-align: center;
+  padding: 50px;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.not-found-container h2 {
+  color: #e67a54;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 25px;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.not-found-container p {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.back-button {
+  background-color: #e67a54;
+  color: white;
+  border: none;
+  padding: 5px 5px;
+  font-size: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #d46b46;
+}
+
+/* Индикатор загрузки */
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 18px;
+  color: #e67a54;
+}
+
 /* ------------------ */
 
 /* ------ */
@@ -3201,13 +3252,13 @@ button:hover {
   }
 }
 .section-header__logo {
-  width: 18rem;
+  width: 16rem;
   margin-left: 2.5rem;
+  margin-top: 0.5rem;
 }
 .section-header__btns {
   margin-top: 1rem;
   margin-bottom: 1rem;
-  margin-right: 2.5rem;
 }
 @media (max-width: 992px) {
   .section-header__logo {
@@ -3239,7 +3290,7 @@ button:hover {
 }
 .nav-menu__list-item {
   margin-right: 6rem;
-  font-size: 1.7rem;
+  font-size: 1.56rem;
   text-align: center;
   font-weight: 400;
 }
@@ -4610,4 +4661,424 @@ button:hover {
 
 .reset-button:hover {
   background-color: #ff8f39;
+}
+
+/* PET_CARD */
+/* Общие стили */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f5f0;
+  color: #333;
+  line-height: 1.6;
+}
+
+.pet-card-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+.pet-card {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.pet-card-decor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.pet-card-decor img {
+  position: absolute;
+  animation: float 8s ease-in-out infinite;
+}
+
+.pet-card-header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.pet-card-image {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 4px solid #f8e1d0;
+}
+
+.pet-card-info {
+  flex-grow: 1;
+}
+
+.pet-name {
+  font-size: 32px;
+  color: #e67a54;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.pet-breed,
+.pet-age,
+.pet-gender {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+/* Стили для табов */
+.pet-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.tab-button {
+  padding: 12px 20px;
+  background-color: #f5e9dd;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #7a6b5d;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+  background-color: #ebd5c0;
+  text-transform: none;
+}
+
+.tab-button.active {
+  background-color: #e67a54;
+  color: white;
+}
+
+.tab-button svg {
+  font-size: 18px;
+}
+
+/* Стили для контента табов */
+.tab-content {
+  min-height: 400px;
+}
+
+.info-section {
+  margin-bottom: 30px;
+}
+
+.info-section h3 {
+  font-size: 24px;
+  color: #e67a54;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #f5e9dd;
+}
+
+.info-section p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+/* Таблицы */
+.table-container {
+  overflow-x: auto;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+.data-table th {
+  background-color: #e67a54;
+  color: white;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.data-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.data-table tr:nth-child(even) {
+  background-color: #fcf9f6;
+}
+
+.data-table tr:hover {
+  background-color: #f5e9dd;
+}
+
+.danger-высокий {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.danger-средний {
+  color: #f39c12;
+  font-weight: bold;
+}
+
+.danger-низкий {
+  color: #27ae60;
+  font-weight: bold;
+}
+
+/* Кнопки */
+.add-button {
+  background-color: #e67a54;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.add-button:hover {
+  background-color: #d46b46;
+}
+
+.pet-actions {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.edit-button,
+.share-button {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.edit-button {
+  background-color: #3498db;
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: #2980b9;
+}
+
+.share-button {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.share-button:hover {
+  background-color: #27ae60;
+}
+
+/* Специальные блоки */
+.stats-container {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.stat-box {
+  flex: 1;
+  background-color: #f9f5f0;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.stat-box h4 {
+  color: #7a6b5d;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.stat-value {
+  font-size: 24px;
+  color: #e67a54;
+  font-weight: bold;
+}
+
+.reminder-box {
+  background-color: #f0f7ff;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.reminder-box h4 {
+  color: #3498db;
+  margin-bottom: 10px;
+}
+
+.next-visit {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.reminder-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.heat-info {
+  background-color: #fef0f0;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.heat-info h4 {
+  color: #e74c3c;
+  margin-bottom: 8px;
+}
+
+.chart-placeholder {
+  background-color: #f9f5f0;
+  padding: 40px;
+  text-align: center;
+  border-radius: 8px;
+  color: #7a6b5d;
+  margin: 20px 0;
+}
+
+/* Анимации */
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-10px) rotate(5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+
+@keyframes paw-fade {
+  0%,
+  100% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+/* Позиционирование декоративных элементов */
+.paw-1 {
+  top: 30%;
+  left: 10%;
+  transform: rotate(15deg);
+  opacity: 0.75;
+}
+
+.paw-2 {
+  top: 25%;
+  left: 14%;
+  transform: rotate(-20deg) scaleX(-1);
+  opacity: 0.75;
+}
+
+.paw-3 {
+  top: 20%;
+  left: 10%;
+  transform: rotate(30deg);
+  opacity: 0.75;
+}
+
+.paw-4 {
+  top: 15%;
+  left: 15%;
+  transform: rotate(-25deg) scaleX(-1);
+  opacity: 0.75;
+}
+
+.paw-5 {
+  top: 10%;
+  left: 12%;
+  transform: rotate(18deg);
+  opacity: 0.75;
+}
+
+.dog-1 {
+  bottom: 4rem;
+  right: 8rem;
+  width: 20rem;
+}
+
+.cat-1 {
+  bottom: 25rem;
+  left: 10rem;
+  width: 20rem;
+}
+
+.cat-2 {
+  top: 20px;
+  right: 100px;
+  width: 20rem;
+}
+
+.contact-info {
+  color: #3498db;
+  font-weight: 500;
+}
+
+@media (max-width: 1499px) {
+  .paw-1,
+  .paw-2,
+  .paw-3,
+  .paw-4,
+  .paw-5,
+  .dog-1,
+  .cat-1,
+  .cat-2 {
+    display: none !important;
+  }
 }
